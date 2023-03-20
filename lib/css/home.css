@@ -1,0 +1,64 @@
+header {
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header .info  {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+header .info h1 {
+    text-align: left;
+    width: 85%;
+    margin-left: 100px;
+    font-size: 45px;
+}
+header .info p {
+    width: 85%;
+    margin: 20px 80px;
+    font-size: 25px;
+}
+
+
+
+header .info .linebar {
+    width: 90%;
+    height: 4px;
+    border-radius: 20px;
+    background: var(--sec);
+}
+header .info .linksicons {
+    width: 85%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .info .linksicons .icon {
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    transition: all 300ms;
+}
+header .info .linksicons .icon svg {
+    width: 50px;
+    height: 50px;
+    fill: var(--sec) !important;
+}
+header .info .linksicons .someonehovered {
+    scale: 0.8;
+}
+header .info .linksicons .hovered {
+    scale: 1.2;
+}
