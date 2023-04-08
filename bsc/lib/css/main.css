@@ -1,7 +1,8 @@
 :root {
     --main: #000;
     --sec: #fff;
-    --alt: #222;
+    --alt: #333;
+    --transrgba: rgba(50, 50, 50, 0.5);
     --fontf: "Inter", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -16,6 +17,33 @@
 body {
     background: var(--main);
     color: var(--sec);
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+::-webkit-scrollbar {
+    display: inline-block;
+    width: 3px;
+    translate: 20px 30px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--alt);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--sec);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    transform: translate(10px);
 }
 
 nav {

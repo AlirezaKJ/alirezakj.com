@@ -18,7 +18,7 @@ function headericonsHover(index) {
 
 function darkmodeVanta() {
     VANTA.FOG({
-        el: ".nav-and-header",
+        el: ".custombg",
         mouseControls: true,
         touchControls: true,
         gyroControls: false,
@@ -33,7 +33,7 @@ function darkmodeVanta() {
 
 function lightmodeVanta() {
     VANTA.FOG({
-        el: ".nav-and-header",
+        el: ".custombg",
         mouseControls: true,
         touchControls: true,
         gyroControls: false,
