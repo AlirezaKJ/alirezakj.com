@@ -8,15 +8,16 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
     <link rel="stylesheet" href="lib/css/main.css">
     <link rel="stylesheet" href="lib/css/bsc.css">
     <title>AKJ | Home</title>
 </head>
-<body>
+<body onscroll="pageScrolled()">
 
     <main>
         <div class="custombg"></div>
+        <div class="custombg2"></div>
         <div class="nav-and-header">
             <nav>
                 <div onclick="navClick(0,'https://alirezakj.com/')" style="margin-left: 20px;"  class="item">Home</div>
@@ -33,7 +34,7 @@
                     <p>Download</p>
                     <div class="linebar"></div>
                     <div class="linksicons">
-                        <a href="https://github.com/AlirezaKJ/BetterSoundCloud/releases/download/V0.5.0/BetterSoundCloud.Setup.0.5.0.exe"><div onmouseout="headericonsHover(-1)" onmouseover="headericonsHover(0)" class="icon">
+                        <a href="https://github.com/AlirezaKJ/BetterSoundCloud/releases/download/V0.5.1/BetterSoundCloud.Setup.0.5.1.exe"><div onmouseout="headericonsHover(-1)" onmouseover="headericonsHover(0)" class="icon">
                             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Windows 11</title><path d="M0,0H11.377V11.372H0ZM12.623,0H24V11.372H12.623ZM0,12.623H11.377V24H0Zm12.623,0H24V24H12.623"/></svg>
                         </div></a>
                         <a href="https://github.com/AlirezaKJ/BetterSoundCloud/archive/refs/heads/main.zip"><div onmouseout="headericonsHover(-1)" onmouseover="headericonsHover(1)" class="icon">
@@ -45,9 +46,38 @@
                     </div>
                 </div>
             </header>
-            <section>
+            <section class="switchbg">
+                <div class="fixbg">
+                    <h4>Themes</h4>
+                    <div class="feature">
+                        <div class="col">
+                            You can change the look of soundcloud using our custom themes and your own stylesheets using BetterSoundCloud built-in custom css editor 
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <h4>Plugins</h4>
+                    <div style="margin-bottom: 40px;" class="feature">
+                        <div class="col">
+                            <div class="imgbox" style="background-image: url('lib/assets/featurebar/plugins.jpg');" title="SoundCloud and JavaScript"></div>
+                        </div>
+                        <div class="col">
+                            we have a custom adblock system for you to choose and a soundcloud downloader to save your favorite song you can also run your custom script using the built-in js editor
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="">
                 <h3>All Versions</h3>
                 <div class="allversions">
+                    <div class="row">
+                        <span class="name">V0.5.1</span>
+                        <a href="https://github.com/AlirezaKJ/BetterSoundCloud/releases/download/V0.5.1/BetterSoundCloud.0.5.1.exe"><span>.exe</span></a>
+                        <a href="https://github.com/AlirezaKJ/BetterSoundCloud/releases/download/V0.5.1/BetterSoundCloud.0.5.1.msi"><span>.msi</span></a>
+                        <a href="https://github.com/AlirezaKJ/BetterSoundCloud/releases/download/V0.5.1/BetterSoundCloud.Setup.0.5.1.exe"><span>setup</span></a>
+                        <a href="https://github.com/AlirezaKJ/BetterSoundCloud/releases/download/V0.5.1/squirrel-windows.rar"><span>squirrel</span></a>
+                        <a href="https://github.com/AlirezaKJ/BetterSoundCloud/releases/download/V0.5.1/win-unpacked.rar"><span>unpacked</span></a>
+                        <a href="https://github.com/AlirezaKJ/BetterSoundCloud/archive/refs/tags/V0.5.1.zip"><span>source</span></a>
+                    </div>
                     <div class="row">
                         <span class="name">V0.5.0</span>
                         <a href="https://github.com/AlirezaKJ/BetterSoundCloud/releases/download/V0.5.0/BetterSoundCloud.0.5.0.exe"><span>.exe</span></a>
@@ -104,6 +134,9 @@
                     </div>
                 </div>
             </section>
+            <footer>
+                <h3>© AlirezaKJ | All Rights Reserved</p>
+            </footer>
         </div>
     </main>
 <script src="lib/js/main.js"></script>

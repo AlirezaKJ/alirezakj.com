@@ -9,6 +9,31 @@
     overflow-y: scroll;
     overflow-x: hidden;
     z-index: 0;
+    display: none;
+}
+
+.custombg canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.custombg2 {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 0;
+    display: none;
+}
+
+.custombg2 canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.activecustombg {
+    display: inline-block;
 }
 
 header {
@@ -36,7 +61,7 @@ header div h1 {
 
 header div p {
     width: 85%;
-    text-align: center;
+    text-align: left;
     margin: 20px 0px;
     font-size: 25px;
 }
@@ -87,6 +112,7 @@ section {
 section h3 {
     font-size: 40px;
     font-weight: 100;
+    margin: 50px 0px;
 }
 
 section .allversions {
@@ -103,7 +129,7 @@ section .allversions .row {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: calc(100% / 6);
+    height: calc(100% / 7);
 }
 
 section .allversions .row > a {
@@ -135,4 +161,47 @@ section .allversions .row .name {
 
 .semisection {
     height: 400px;
+}
+
+section .fixbg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: var(--alt);
+}
+
+section .fixbg h4 {
+    font-size: 50px;
+    font-weight: 100;
+    margin: 50px 0px;
+}
+
+section .feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 90%;
+    height: 300px;
+}
+
+section .feature .col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42%;
+    height: 100%;
+    font-size: 25px;
+}
+
+section .feature .col .imgbox {
+    width: 90%;
+    height: 90%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* margin: 0 20px; */
 }

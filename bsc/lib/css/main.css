@@ -77,3 +77,16 @@ nav .toggled {
     transform: translateY(10px);
     border: solid 1px var(--sec);
 }
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+}
+
+footer h3 {
+    font-size: 25px;
+    font-weight: 100;
+}
