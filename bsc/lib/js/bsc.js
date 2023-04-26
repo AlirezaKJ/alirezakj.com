@@ -34,8 +34,8 @@ VANTA.CELLS({
 
 VANTA.NET({
     el: ".custombg2",
-    mouseControls: true,
-    touchControls: true,
+    mouseControls: false,
+    touchControls: false,
     gyroControls: false,
     minHeight: 1080.00,
     minWidth: 1920.00,
@@ -44,32 +44,6 @@ VANTA.NET({
     color: 0xff7d00,
     backgroundColor: 0x0
 })
-
-// VANTA.FOG({
-//     el: ".",
-//     mouseControls: true,
-//     touchControls: true,
-//     gyroControls: false,
-//     minHeight: 200.00,
-//     minWidth: 200.00,
-//     highlightColor: 0x812200,
-//     midtoneColor: 0x4a0f00,
-//     lowlightColor: 0x1f0000,
-//     baseColor: 0x0
-// })
-
-// VANTA.FOG({
-//     el: ".custombg",
-//     mouseControls: true,
-//     touchControls: true,
-//     gyroControls: false,
-//     minHeight: 200.00,
-//     minWidth: 200.00,
-//     highlightColor: 0xff4100,
-//     midtoneColor: 0xff6f44,
-//     lowlightColor: 0xffc9b0,
-//     baseColor: 0x0
-// })
 
 // Vanta BG Change on Scroll
 let featuresbar = document.querySelector('.switchbg').getBoundingClientRect();
