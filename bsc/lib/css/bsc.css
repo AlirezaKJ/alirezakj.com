@@ -10,6 +10,7 @@
     overflow-x: hidden;
     z-index: 0;
     display: none;
+    background: #000;
 }
 
 .custombg canvas {
@@ -25,6 +26,7 @@
     overflow-x: hidden;
     z-index: 0;
     display: none;
+    background: #000;
 }
 
 .custombg2 canvas {
@@ -118,7 +120,7 @@ section h3 {
 section .allversions {
     min-width: 60%;
     width: 900px;
-    height: 400px;
+    height: 500px;
     margin: 50px 0px;
     background: var(--transrgba);
     border-radius: 20px;
@@ -159,10 +161,6 @@ section .allversions .row .name {
     border-right: 1px solid var(--sec);
 }
 
-.semisection {
-    height: 400px;
-}
-
 section .fixbg {
     display: flex;
     align-items: center;
@@ -192,7 +190,8 @@ section .feature .col {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 42%;
+    width: 600px;
+    max-width: 42%;
     height: 100%;
     font-size: 25px;
 }
@@ -200,7 +199,7 @@ section .feature .col {
 section .feature .col .imgbox {
     width: 90%;
     height: 90%;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     /* margin: 0 20px; */
