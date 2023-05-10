@@ -20,44 +20,15 @@ function headericonsHover(index) {
 let darkvantabg = document.querySelector('.custombg');
 let lightvantabg = document.querySelector('.custombg2');
 
-VANTA.CELLS({
+VANTA.CLOUDS({
     el: ".custombg",
     mouseControls: true,
     touchControls: true,
     gyroControls: false,
     minHeight: 200.00,
     minWidth: 200.00,
-    scale: 1.00,
-    color1: 0xff3800,
-    color2: 0x545353
+    backgroundColor: 0x0,
+    skyColor: 0x0,
+    cloudColor: 0x727272,
+    cloudShadowColor: 0x272727
 })
-
-VANTA.NET({
-    el: ".custombg2",
-    mouseControls: false,
-    touchControls: false,
-    gyroControls: false,
-    minHeight: 1080.00,
-    minWidth: 1920.00,
-    scale: 1.00,
-    scaleMobile: 1.00,
-    color: 0xff7d00,
-    backgroundColor: 0x0
-})
-
-// Vanta BG Change on Scroll
-let featuresbar = document.querySelector('.switchbg').getBoundingClientRect();
-let switchbgpos = featuresbar.top;
-
-function pageScrolled() {
-    let scrollpos = window.scrollY;
-    if (scrollpos < switchbgpos) {
-        darkvantabg.classList.add("activecustombg")
-        lightvantabg.classList.remove("activecustombg")
-    } else if (scrollpos > switchbgpos) {
-        lightvantabg.classList.add("activecustombg")
-        darkvantabg.classList.remove("activecustombg")
-    }
-}
-
-pageScrolled()

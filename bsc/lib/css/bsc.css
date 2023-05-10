@@ -9,27 +9,10 @@
     overflow-y: scroll;
     overflow-x: hidden;
     z-index: 0;
-    display: none;
     background: #000;
 }
 
 .custombg canvas {
-    width: 100% !important;
-    height: 100% !important;
-}
-
-.custombg2 {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    z-index: 0;
-    display: none;
-    background: #000;
-}
-
-.custombg2 canvas {
     width: 100% !important;
     height: 100% !important;
 }
@@ -100,6 +83,17 @@ header .linksicons .someonehovered {
 }
 header .linksicons .hovered {
     scale: 1.2;
+}
+
+header .scrolldown {
+    position: absolute;
+    top: calc(100vh - 40px);
+    left: calc(50vw - 15px);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section {
@@ -203,4 +197,32 @@ section .feature .col .imgbox {
     background-repeat: no-repeat;
     background-position: center;
     /* margin: 0 20px; */
+}
+
+.featuresbox {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60vw;
+    margin: 100px 20vw;
+}
+
+.featuresbox .featurebox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 140px;
+    width: 20%;
+    margin: 2.5%;
+    background: var(--transrgba2);
+    border-radius: 20px;
+}
+
+.featuresbox .featurebox .featurename {
+    font-size: 18px;
+}
+
+.featuresbox .featurebox img {
+    width: 25%;
 }

@@ -1,6 +1,5 @@
 navitems = document.querySelectorAll("nav .item")
 
-
 setTimeout(() => {
     navitems.forEach(element => {
         element.classList.remove("toggled")
