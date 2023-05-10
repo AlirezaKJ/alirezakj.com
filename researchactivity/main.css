@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'Open Sans Light';
+    src: url("font\\Open Sans\\OpenSans-Light.ttf");
+}
+@font-face {
+    font-family: 'Open Sans Medium';
+    src: url("font\\Open Sans\\OpenSans-Medium.ttf");
+}
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url("font\\Open Sans\\OpenSans-Regular.ttf");
+}
+@font-face {
+    font-family: 'Open Sans SemiBold';
+    src: url("font\\Open Sans\\OpenSans-SemiBold.ttf");
+}
+@font-face {
+    font-family: 'Open Sans Bold';
+    src: url("font\\Open Sans\\OpenSans-Bold.ttf");
+}
+@font-face {
+    font-family: 'Open Sans ExtraBold';
+    src: url("font\\Open Sans\\OpenSans-ExtraBold.ttf");
+}
+
+:root {
+    --primary: #0d1b2a;
+    --secondary: #1b263b;
+    --tertiary: #415a77;
+    --quaternary: #778da9;
+    --quinary: #e0e1dd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    text-decoration: none
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: var(--primary);
+    color: var(--quinary);
+}
+
+main {
+    width: 1000px;
+    max-width: 100%;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+
+h1 {
+    text-indent: 50px;
+    font-family: 'Open Sans ExtraBold';
+}
+
+h2 {
+    margin: 10px 0;
+    text-indent: 40px;
+    font-family: 'Open Sans SemiBold';
+}
+
+h3 {
+    margin: 10px 0;
+    text-indent: 30px;
+    font-family: 'Open Sans Regular';
+}
+
+p {
+    margin: 20px 0;
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: "Open Sans Light";
+}
+
+a {
+    font-size: 20px;
+    font-family: "Open Sans Light";
+    color: inherit;
+}
+
+section a {
+    margin-left: 20px;
+}
+
+img {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+}
+
+header {
+    margin: 40px 50px;
+}
+
+header .name {
+    margin: 10px 0;
+    margin-left: 60px;
+    font-family: 'Open Sans Light';
+}
+
+header .school {
+    margin: 10px 0px;
+    font-family: 'Open Sans Light';
+}
+
+section {
+    margin: 15px 0;
+}
+
+article {
+    background: var(--secondary);
+    padding: 20px;
+    margin: 20px 80px;
+    border-radius: 20px;
+}
+
+article p {
+    color: var(--quaternary);
+}
