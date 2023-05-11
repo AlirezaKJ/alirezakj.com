@@ -94,6 +94,11 @@ header .scrolldown {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 300ms;
+}
+header .scrolldown:hover {
+    scale: 1.8;
+    translate: 0 -10px;
 }
 
 section {
