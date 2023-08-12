@@ -93,15 +93,29 @@ main section .toolsicons svg {
     margin: 5px;
 }
 
-main .education-section {
+main .topic-section {
     height: 100%;
     max-height: 800px;
 }
-main .education-section h3 {
+main .topic-section h3 {
     margin: 20px 0;
 }
+main section ul {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0;
+}
+main section ul h4 {
+    margin-left: 30px;
+    font-size: 25px;
+}
+main section ul li {
+    margin: 20px 70px;
+    font-size: 20px;
+}
 main section .education {
-    width: 600px;
+    width: 100%;
+    max-width: 800px;
     margin: 20px 0;
 }
 main section .education .education-item {

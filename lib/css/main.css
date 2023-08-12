@@ -14,6 +14,11 @@
     font-family: var(--fontf);
 }
 
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 body {
     background: var(--main);
     color: var(--sec);
