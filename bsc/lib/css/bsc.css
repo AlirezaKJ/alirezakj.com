@@ -130,7 +130,7 @@ section .allversions .row {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: calc(100% / 8);
+    height: calc(100% / 9);
 }
 
 section .allversions .row > a {
