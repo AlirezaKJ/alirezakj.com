@@ -1,131 +1,173 @@
-header {
-    width: 100%;
-    height: calc(100vh - 80px);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+:root {
+    --ccolor1: #04322f;
+    --ccolor2: #1c334b;
+    --ccolor3: #31263e;
+    --ccolor4: #33120e;
 }
 
-header .info  {
+main header {
+    width: 100%;
+    height: calc(100vh - var(--nwidth));
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+main header .headerbg {
+    z-index: -5;
+    position: fixed;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
+    background: center no-repeat;
+    background-size: cover;
+    background-image: url(../assets/header/headerbg.JPG);
+    filter: blur(5px);
+    opacity: 0.4;
+}
+
+main header .row {
+    width: 50%;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+main header .row h1 {
+    height: 70px;
+    font-size: 40px;
+}
+main header .row .items {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    gap: 30px;
+    height: 90px;
 }
-
-header .info h1 {
-    text-align: left;
-    width: 85%;
-    margin-left: 100px;
-    font-size: 45px;
-}
-header .info p {
-    width: 85%;
-    margin: 20px 80px;
-    font-size: 25px;
-}
-
-
-
-header .info .linebar {
-    width: 90%;
-    height: 4px;
-    border-radius: 20px;
-    background: var(--sec);
-}
-header .info .linksicons {
-    width: 85%;
-    height: 100px;
+main header .row .item {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 75px;
+    fill: var(--text);
+    transition: 200ms ease-in-out;
 }
-
-header .info .linksicons .icon {
-    text-align: center;
-    width: 100px;
-    height: 50px;
-    transition: all 300ms;
+main header .row .item svg {
+    scale: 0.6;
 }
-header .info .linksicons .icon svg {
-    width: 50px;
-    height: 50px;
-    fill: var(--sec) !important;
-}
-header .info .linksicons .someonehovered {
-    scale: 0.8;
-}
-header .info .linksicons .hovered {
+main header .row .item:hover {
+    fill: var(--primary);
     scale: 1.2;
+    width: 120px;
+    height: 45px;
+}
+main header .divider {
+    width: 85%;
+    height: 2px;
+    background: var(--text);
 }
 
 main section {
-    width: 100%;
-    height: 400px;
-    background: var(--alt);
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-}
-
-main section h3 {
-    text-align: center;
-    margin: 50px 0;
-    font-size: 35px;
-}
-main section .toolsicons {
-    display: flex;
-    width: 500px;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-}
-main section .toolsicons svg {
-    width: 50px;
-    height: 50px;
-    fill: var(--sec) !important;
-    margin: 5px;
+    width: 100%;
+    /* background: blue; */
+    margin: 100px 0;
+    padding-bottom: 50px;
 }
 
-main .topic-section {
-    height: 100%;
-    max-height: 800px;
+main .education {
+    background-color: var(--ccolor2);
 }
-main .topic-section h3 {
-    margin: 20px 0;
+main .projects {
+    background-color: var(--ccolor1);
+}
+main .expriences {
+    background-color: var(--ccolor3);
+}
+main .contactme {
+    background-color: var(--ccolor4);
+}
+main section h3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 44px;
+    height: 50px;
+    margin: 70px 0;
+}
+
+main section .item {
+    height: 150px;
+    padding: 15px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px rgba(0, 0, 0, 0);
+    transition: all 0.2s ease-in-out;
+}
+main section .item:hover {
+    cursor: pointer;
+    border: solid 1px var(--primary);
+}
+
+main section .item .item-title {
+    transition: all 0.2s ease-in-out;
+    font-size: 40px;
+    line-height: 120px;
+    height: 120px;
+}
+main section .item .item-description {
+    color: var(--primary);
+    transition: all 0.2s ease-in-out;
+    height: 0px;
+    opacity: 0;
+}
+main section .item .item-date {
+    color: var(--primary);
+    transition: all 0.2s ease-in-out;
+    height: 0px;
+    opacity: 0;
+
+}
+main section .item:hover .item-title {
+    font-size: 36px;
+    font-weight: 100;
+    line-height: 60px;
+    height: 60px;
+}
+main section .item:hover .item-description {
+    opacity: 1;
+    height: 30px;
+}
+main section .item:hover .item-date {
+    opacity: 1;
+    height: 30px;
 }
 main section ul {
-    width: 100%;
-    max-width: 800px;
-    margin: 20px 0;
-}
-main section ul h4 {
-    margin-left: 30px;
-    font-size: 25px;
+    display: flex;
+    width: 80%;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    list-style-type: none;
 }
 main section ul li {
-    margin: 20px 70px;
-    font-size: 20px;
-}
-main section .education {
     width: 100%;
-    max-width: 800px;
-    margin: 20px 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 28px;
 }
-main section .education .education-item {
-    transition: all 300ms;
-    padding: 30px 20px;
-    border: solid 1px var(--alt);
+main section ul li .list-left {
+    width: 30%;
+    padding-right: 50px;
+    text-align: right;
 }
-main section .education .education-item:hover {
-    border: solid 1px var(--sec);
-}
-main section .education .education-item h4 {
-    font-size: 22px;
+main section ul li .list-right {
+    width: 80%;
 }
