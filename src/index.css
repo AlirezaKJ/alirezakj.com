@@ -2,10 +2,23 @@
 
 :root {
   --ff: "Rethink Sans", sans-serif;
+  --bg: #1f1f1f;
+  --text: #d1cfc0;
+  --trans1: rgba(255, 255, 255, .1);
 }
 
 * {
   margin: 0px;
   padding: 0px;
   font-family: var(--ff);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
