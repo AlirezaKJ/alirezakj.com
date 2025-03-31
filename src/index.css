@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+
+:root {
+  --ff: "Rethink Sans", sans-serif;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: var(--ff);
+}
