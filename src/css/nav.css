@@ -1,10 +1,63 @@
 nav {
   width: 100%;
+  height: 50px;
   display: flex;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+  padding: calc(var(--letterw) / 2) 0px;
 }
 
-nav a {
+nav .letterbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: calc(var(--letterw) / 2);
+}
+nav .letterbar #letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--letterw);
+  height: var(--letterw);
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+nav .letterbar .arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--letterw);
+  width: calc(var(--letterw) / 2);
+  transform-origin: -25px 25px;
+  rotate: 0deg;
+  transition: all 0.3s ease-in-out;
+  & svg {
+    fill: var(--text);
+    scale: 1.4;
+  }
+}
+nav .letterbar .arrowdown {
+  rotate: 90deg;
+}
+nav .letterbar .arrowup {
+  rotate: -90deg;
+}
+
+nav .links a {
   font-size: 2rem;
+  font-weight: 500;
+  background: var(--wtrans1);
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+}
+
+nav .links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-right: calc(var(--letterw) / 2);
 }

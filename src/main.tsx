@@ -4,13 +4,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import './index.css'
 import Homepage from './Homepage.tsx'
 import BSC from './BSC.tsx'
-import Nav from './Nav.tsx'
+import Base from './Base.tsx'
 
 
 const router = createBrowserRouter([
   {
     path: '/',
-    Component: Nav,
+    Component: Base,
     children: [
       { index: true, Component: Homepage },
       { path: "bsc", Component: BSC },
