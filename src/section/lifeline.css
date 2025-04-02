@@ -9,7 +9,8 @@
 }
 .lifeline h2 {
   font-size: 64px;
-  color: var(--text);
+  font-style: italic;
+  color: var(--accent);
   margin: 60px;
 }
 .lifeline .timeline {
