@@ -1,1 +1,243 @@
 @import 'tailwindcss';
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url(/Fonts/IBM_Plex_Sans/IBMPlexSans-Italic-VariableFont_wdth,wght.ttf) format("truetype");
+  font-style: italic;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url(/Fonts/IBM_Plex_Sans/IBMPlexSans-VariableFont_wdth,wght.ttf) format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url(/Fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf) format("truetype");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url(/Fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf) format("truetype");
+  font-style: normal;
+}
+
+@layer base {
+
+  html {
+    font-family: var(--font-sans);
+    background: var(--background);
+    color: var(--text);
+  }
+
+  :root {
+    --text: #0b1518;
+    --text-50: #eef5f7;
+    --text-100: #dcebef;
+    --text-200: #b9d6df;
+    --text-300: #96c2cf;
+    --text-400: #73adbf;
+    --text-500: #5099af;
+    --text-600: #407a8c;
+    --text-700: #305c69;
+    --text-800: #203d46;
+    --text-900: #101f23;
+    --text-950: #080f11;
+    
+    --background: #e4eff6;
+    --background-50: #ecf4f8;
+    --background-100: #d9e9f2;
+    --background-200: #b3d3e5;
+    --background-300: #8dbed8;
+    --background-400: #67a8cb;
+    --background-500: #4192be;
+    --background-600: #347598;
+    --background-700: #275872;
+    --background-800: #1a3a4c;
+    --background-900: #0d1d26;
+    --background-950: #070f13;
+    
+    --primary: #1d5a72;
+    --primary-50: #ebf6fa;
+    --primary-100: #d6ecf5;
+    --primary-200: #aed9ea;
+    --primary-300: #85c6e0;
+    --primary-400: #5db3d5;
+    --primary-500: #34a0cb;
+    --primary-600: #2a80a2;
+    --primary-700: #1f607a;
+    --primary-800: #154051;
+    --primary-900: #0a2029;
+    --primary-950: #051014;
+    
+    --secondary: #7bc9ea;
+    --secondary-50: #e9f6fc;
+    --secondary-100: #d3edf8;
+    --secondary-200: #a7dbf1;
+    --secondary-300: #7bc9ea;
+    --secondary-400: #4fb7e3;
+    --secondary-500: #22a5dd;
+    --secondary-600: #1c84b0;
+    --secondary-700: #156384;
+    --secondary-800: #0e4258;
+    --secondary-900: #07212c;
+    --secondary-950: #031016;
+    
+    --accent: #128fc4;
+    --accent-50: #e8f6fd;
+    --accent-100: #d0eefb;
+    --accent-200: #a2ddf6;
+    --accent-300: #73ccf2;
+    --accent-400: #44bbee;
+    --accent-500: #16aae9;
+    --accent-600: #1188bb;
+    --accent-700: #0d668c;
+    --accent-800: #09445d;
+    --accent-900: #04222f;
+    --accent-950: #021117;
+  }
+  .dark {
+    --text: #e7f1f4;
+    --text-50: #080f11;
+    --text-100: #101e23;
+    --text-200: #203b46;
+    --text-300: #305969;
+    --text-400: #40768c;
+    --text-500: #5094af;
+    --text-600: #73a9bf;
+    --text-700: #96bfcf;
+    --text-800: #b9d4df;
+    --text-900: #dceaef;
+    --text-950: #eef4f7;
+    
+    --background: #09141b;
+    --background-50: #070f13;
+    --background-100: #0e1e25;
+    --background-200: #1b3c4b;
+    --background-300: #295a70;
+    --background-400: #367896;
+    --background-500: #4495bb;
+    --background-600: #69abc9;
+    --background-700: #8fc0d6;
+    --background-800: #b4d5e4;
+    --background-900: #daeaf1;
+    --background-950: #ecf4f8;
+    
+    --primary: #8dcae2;
+    --primary-50: #051014;
+    --primary-100: #0a2029;
+    --primary-200: #144052;
+    --primary-300: #1f607a;
+    --primary-400: #2981a3;
+    --primary-500: #33a1cc;
+    --primary-600: #5cb4d6;
+    --primary-700: #85c6e0;
+    --primary-800: #add9eb;
+    --primary-900: #d6ecf5;
+    --primary-950: #ebf6fa;
+    
+    --secondary: #156384;
+    --secondary-50: #041016;
+    --secondary-100: #07212c;
+    --secondary-200: #0e4258;
+    --secondary-300: #156384;
+    --secondary-400: #1d83af;
+    --secondary-500: #24a4db;
+    --secondary-600: #50b6e2;
+    --secondary-700: #7bc9ea;
+    --secondary-800: #a7dbf1;
+    --secondary-900: #d3edf8;
+    --secondary-950: #e9f6fb;
+    
+    --accent: #3bb7ed;
+    --accent-50: #021117;
+    --accent-100: #04222f;
+    --accent-200: #09445d;
+    --accent-300: #0d668c;
+    --accent-400: #1188bb;
+    --accent-500: #16aae9;
+    --accent-600: #44bbee;
+    --accent-700: #73ccf2;
+    --accent-800: #a2ddf6;
+    --accent-900: #d0eefb;
+    --accent-950: #e8f6fd;
+  }
+}
+
+@theme {
+
+  --font-serif: "Playfair Display";
+  --font-sans: "IBM Plex Sans";
+
+  /* text */
+  --color-text-50: var(--text-50);
+  --color-text-100: var(--text-100);
+  --color-text-200: var(--text-200);
+  --color-text-300: var(--text-300);
+  --color-text-400: var(--text-400);
+  --color-text-500: var(--text-500);
+  --color-text-600: var(--text-600);
+  --color-text-700: var(--text-700);
+  --color-text-800: var(--text-800);
+  --color-text-900: var(--text-900);
+  --color-text-950: var(--text-950);
+
+  /* background */
+  --color-background-50: var(--background-50);
+  --color-background-100: var(--background-100);
+  --color-background-200: var(--background-200);
+  --color-background-300: var(--background-300);
+  --color-background-400: var(--background-400);
+  --color-background-500: var(--background-500);
+  --color-background-600: var(--background-600);
+  --color-background-700: var(--background-700);
+  --color-background-800: var(--background-800);
+  --color-background-900: var(--background-900);
+  --color-background-950: var(--background-950);
+
+  /* primary */
+  --color-primary-50: var(--primary-50);
+  --color-primary-100: var(--primary-100);
+  --color-primary-200: var(--primary-200);
+  --color-primary-300: var(--primary-300);
+  --color-primary-400: var(--primary-400);
+  --color-primary-500: var(--primary-500);
+  --color-primary-600: var(--primary-600);
+  --color-primary-700: var(--primary-700);
+  --color-primary-800: var(--primary-800);
+  --color-primary-900: var(--primary-900);
+  --color-primary-950: var(--primary-950);
+
+  /* secondary */
+  --color-secondary-50: var(--secondary-50);
+  --color-secondary-100: var(--secondary-100);
+  --color-secondary-200: var(--secondary-200);
+  --color-secondary-300: var(--secondary-300);
+  --color-secondary-400: var(--secondary-400);
+  --color-secondary-500: var(--secondary-500);
+  --color-secondary-600: var(--secondary-600);
+  --color-secondary-700: var(--secondary-700);
+  --color-secondary-800: var(--secondary-800);
+  --color-secondary-900: var(--secondary-900);
+  --color-secondary-950: var(--secondary-950);
+
+  /* accent */
+  --color-accent-50: var(--accent-50);
+  --color-accent-100: var(--accent-100);
+  --color-accent-200: var(--accent-200);
+  --color-accent-300: var(--accent-300);
+  --color-accent-400: var(--accent-400);
+  --color-accent-500: var(--accent-500);
+  --color-accent-600: var(--accent-600);
+  --color-accent-700: var(--accent-700);
+  --color-accent-800: var(--accent-800);
+  --color-accent-900: var(--accent-900);
+  --color-accent-950: var(--accent-950);
+
+  /* (optional) convenient aliases so bg-primary uses 500 by default
+  --color-text: var(--color-text-500);
+  --color-background: var(--color-background-500);
+  --color-primary: var(--color-primary-500);
+  --color-secondary: var(--color-secondary-500);
+  --color-accent: var(--color-accent-500); */
+}
