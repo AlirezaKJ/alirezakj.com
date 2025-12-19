@@ -22,12 +22,128 @@
   font-style: normal;
 }
 
-@layer base {
+@font-face {
+  font-family: "Grenze";
+  src: url(/Fonts/Grenze/Grenze-Black.ttf) format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Grenze";
+  src: url(/Fonts/Grenze/Grenze-BlackItalic.ttf) format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Grenze";
+  src: url(/Fonts/Grenze/Grenze-ExtraBold.ttf) format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Grenze";
+  src: url(/Fonts/Grenze/Grenze-ExtraBoldItalic.ttf) format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Grenze";
+  src: url(/Fonts/Grenze/Grenze-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Grenze";
+  src: url(/Fonts/Grenze/Grenze-BoldItalic.ttf) format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Grenze";
+  src: url(/Fonts/Grenze/Grenze-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Grenze";
+  src: url(/Fonts/Grenze/Grenze-SemiBoldItalic.ttf) format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Grenze";
+  src: url(/Fonts/Grenze/Grenze-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Grenze";
+  src: url(/Fonts/Grenze/Grenze-MediumItalic.ttf) format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Grenze";
+  src: url(/Fonts/Grenze/Grenze-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Grenze";
+  src: url(/Fonts/Grenze/Grenze-RegularItalic.ttf) format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Grenze";
+  src: url(/Fonts/Grenze/Grenze-ExtraLight.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Grenze";
+  src: url(/Fonts/Grenze/Grenze-ExtraLightItalic.ttf) format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Grenze";
+  src: url(/Fonts/Grenze/Grenze-Light.ttf) format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Grenze";
+  src: url(/Fonts/Grenze/Grenze-LightItalic.ttf) format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Grenze";
+  src: url(/Fonts/Grenze/Grenze-Thin.ttf) format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Grenze";
+  src: url(/Fonts/Grenze/Grenze-ThinItalic.ttf) format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
 
+@layer base {
   html {
     font-family: var(--font-sans);
     background: var(--background);
     color: var(--text);
+  }
+
+  .writing-mode-vertical-lr {
+    writing-mode: vertical-lr;
+  }
+
+  .writing-mode-sideways-lr {
+    writing-mode: sideways-lr;
   }
 
   :root {
@@ -166,7 +282,7 @@
 
 @theme {
 
-  --font-serif: "Playfair Display";
+  --font-serif: "Grenze";
   --font-sans: "IBM Plex Sans";
 
   /* text */
