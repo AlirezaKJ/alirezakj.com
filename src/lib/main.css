@@ -131,6 +131,28 @@
   font-style: italic;
 }
 
+@layer utilities {
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+  
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+}
+
 @layer base {
   html {
     font-family: var(--font-sans);
@@ -147,6 +169,9 @@
   }
 
   :root {
+
+    --keyw: calc(100% - 30 * 4px);
+
     --text: #0b1518;
     --text-50: #eef5f7;
     --text-100: #dcebef;
@@ -286,6 +311,7 @@
   --font-sans: "IBM Plex Sans";
 
   /* text */
+  --color-text: var(--text);
   --color-text-50: var(--text-50);
   --color-text-100: var(--text-100);
   --color-text-200: var(--text-200);
@@ -299,6 +325,7 @@
   --color-text-950: var(--text-950);
 
   /* background */
+  --color-background: var(--background);
   --color-background-50: var(--background-50);
   --color-background-100: var(--background-100);
   --color-background-200: var(--background-200);
@@ -312,6 +339,7 @@
   --color-background-950: var(--background-950);
 
   /* primary */
+  --color-primary: var(--primary);
   --color-primary-50: var(--primary-50);
   --color-primary-100: var(--primary-100);
   --color-primary-200: var(--primary-200);
@@ -325,6 +353,7 @@
   --color-primary-950: var(--primary-950);
 
   /* secondary */
+  --color-secondary: var(--secondary);
   --color-secondary-50: var(--secondary-50);
   --color-secondary-100: var(--secondary-100);
   --color-secondary-200: var(--secondary-200);
@@ -338,6 +367,7 @@
   --color-secondary-950: var(--secondary-950);
 
   /* accent */
+  --color-accent: var(--accent);
   --color-accent-50: var(--accent-50);
   --color-accent-100: var(--accent-100);
   --color-accent-200: var(--accent-200);
@@ -351,9 +381,5 @@
   --color-accent-950: var(--accent-950);
 
   /* (optional) convenient aliases so bg-primary uses 500 by default
-  --color-text: var(--color-text-500);
-  --color-background: var(--color-background-500);
-  --color-primary: var(--color-primary-500);
-  --color-secondary: var(--color-secondary-500);
-  --color-accent: var(--color-accent-500); */
+  */
 }

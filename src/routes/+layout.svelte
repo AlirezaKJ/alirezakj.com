@@ -5,22 +5,22 @@
 	import Nav from '$lib/Components/Nav.svelte';
 
 	import { onMount } from 'svelte';
-	import gsap from 'gsap'
-	import { ScrollSmoother } from 'gsap/ScrollSmoother';
-
-
-	gsap.registerPlugin(ScrollSmoother);
+	import Lenis from 'lenis';
+	import 'lenis/dist/lenis.css';
 
 	onMount(() => {
-		ScrollSmoother.create({
-			wrapper: '#smoother-wrapper',
-			content: '#smoother-content',
-			smooth: 1.5,
-			effects: true
-		});
+		const lenis = new Lenis()
+
+		function raf(time) {
+			lenis.raf(time)
+			requestAnimationFrame(raf)
+		}
+
+		requestAnimationFrame(raf)
 	})
 
 </script>
+
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
@@ -29,10 +29,9 @@
 
 <Nav />
 
-<main id="smoother-wrapper">
-	<div id="smoother-content">
+<main>
+	<div>
 		<slot />
+		<Footer />
 	</div>
 </main>
-
-<Footer />
