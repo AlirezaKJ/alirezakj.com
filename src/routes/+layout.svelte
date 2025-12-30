@@ -7,17 +7,40 @@
 	import { onMount } from 'svelte';
 	import Lenis from 'lenis';
 	import 'lenis/dist/lenis.css';
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	import { scrollState, lenisStore } from '$lib/stores/scroll';
 
 	onMount(() => {
-		const lenis = new Lenis()
+		gsap.registerPlugin(ScrollTrigger);
+		const lenis = new Lenis();
+		lenisStore.set(lenis);
 
-		function raf(time) {
-			lenis.raf(time)
-			requestAnimationFrame(raf)
-		}
+		lenis.on('scroll', (e) => {
+			ScrollTrigger.update(e);
+			scrollState.set({
+				scroll: e.scroll,
+				limit: e.limit,
+				velocity: e.velocity,
+				direction: e.direction,
+				progress: e.progress
+			});
+		});
 
-		requestAnimationFrame(raf)
-	})
+        lenis.on('scroll', ({ velocity }) => {
+            if (Math.abs(velocity) < 0.1) {
+                 scrollState.update(s => ({ ...s, direction: 0 }));
+            }
+        });
+
+
+
+		gsap.ticker.add((time) => {
+			lenis.raf(time * 1000);
+		});
+
+		gsap.ticker.lagSmoothing(0);
+	});
 
 </script>
 

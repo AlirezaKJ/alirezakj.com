@@ -1,9 +1,9 @@
-<section class="about min-h-screen flex flex-col justify-center px-6 md:px-20 py-24 relative overflow-hidden">
+<section class="about min-h-screen flex flex-col justify-start relative overflow-hidden">
   <!-- Decorative background elements -->
   <div class="absolute top-0 right-0 w-1/3 h-1/3 bg-primary-100/30 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
   <div class="absolute bottom-0 left-0 w-1/4 h-1/4 bg-secondary-100/30 rounded-full blur-[80px] -z-10 pointer-events-none"></div>
 
-  <div class="max-w-[var(--keyw)] mx-auto w-full ">
+  <div class="max-w-[var(--keyw)] mx-auto w-full">
     <!-- Hero Header -->
     <div class="space-y-6 animate-fade-in-up">
       <h1 class="font-serif text-6xl md:text-8xl lg:text-9xl font-bold leading-none tracking-tight text-primary-950">

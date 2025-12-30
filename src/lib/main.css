@@ -170,7 +170,7 @@
 
   :root {
 
-    --keyw: calc(100% - 30 * 4px);
+    --keyw: calc(100% - ( 30 * 4px) * 2);
 
     --text: #0b1518;
     --text-50: #eef5f7;
