@@ -158,6 +158,7 @@
     font-family: var(--font-sans);
     background: var(--background);
     color: var(--text);
+    font-feature-settings: "lnum";
   }
 
   .writing-mode-vertical-lr {

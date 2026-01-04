@@ -1,8 +1,8 @@
 <script>
 	import '$lib/main.css';
 	import favicon from '$lib/assets/favicon.svg';
-	import Footer from '$lib/Components/Footer.svelte';
-	import Nav from '$lib/Components/Nav.svelte';
+	import Footer from '$lib/Components/Layouts/Footer.svelte';
+	import Nav from '$lib/Components/Layouts/Nav.svelte';
 
 	import { onMount } from 'svelte';
 	import Lenis from 'lenis';
