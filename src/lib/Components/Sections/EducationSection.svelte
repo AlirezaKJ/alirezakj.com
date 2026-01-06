@@ -1,6 +1,6 @@
 <section class="education py-24 px-6 md:px-20 min-h-screen">
   <div class="max-w-6xl mx-auto">
-    <h2 class="font-serif text-5xl md:text-7xl font-bold mb-20 text-primary-950 text-center">Education</h2>
+    <h2 class="font-serif text-5xl md:text-7xl font-bold mb-20 text-primary-950 text-center">Education And Certificates</h2>
 
     <div class="grid md:grid-cols-2 gap-8">
       
