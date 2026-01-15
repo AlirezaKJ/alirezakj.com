@@ -12,9 +12,10 @@
 		<div class="mb-20">
 			<h3 class="mb-12 flex items-center gap-3 text-2xl font-bold text-primary-900 md:text-3xl">
 				<span class="flex h-10 w-10 items-center justify-center rounded-full bg-accent-100">
-					<svg class="h-6 w-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-accent-600" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M840-288v-276L480-384 48-600l432-216 432 216v312h-72ZM480-144 216-276v-159l264 132 264-132v159L480-144Z"/></svg>
+					<!-- <svg class="h-6 w-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17s4.5 10.747 10 10.747c5.5 0 10-4.998 10-10.747S17.5 6.253 12 6.253z" />
-					</svg>
+					</svg> -->
 				</span>
 				Education
 			</h3>
