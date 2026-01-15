@@ -27,7 +27,7 @@
           Backend
         </h3>
         <ul class="space-y-3">
-          {#each ['Node.js', 'Python & Flask', 'Database Design & SQL', 'RESTful APIs', 'Authentication Systems'] as skill}
+          {#each ['Node.js', 'Python & Flask', 'Database Structure & SQL', 'RESTful APIs', 'Authentication Systems'] as skill}
             <li class="flex items-start gap-3 text-primary-700">
               <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent-400 flex-shrink-0"></span>
               {skill}

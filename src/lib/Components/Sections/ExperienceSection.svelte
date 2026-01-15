@@ -1,7 +1,7 @@
 <section class="experiences bg- min-h-screen px-6 py-24 md:px-20">
 	<div class="mx-auto max-w-4xl">
 		<h2 class="text-primary-950 mb-20 text-center font-serif text-5xl font-bold md:text-7xl">
-			Experience & Achievements
+			Work Experience
 		</h2>
 
 		<div class="border-primary-100 relative ml-3 space-y-16 border-l-2 md:ml-6">
@@ -47,7 +47,7 @@
 					<h3 class="text-primary-900 text-2xl font-bold">Web Developer</h3>
 					<span class="text-primary-500 font-mono text-sm">2025</span>
 				</div>
-				<p class="text-primary-600 mb-2 font-serif text-lg italic">Lenexa Medical</p>
+				<p class="text-primary-600 mb-2 font-serif text-lg italic">Lenexa Medical • Melbourne, Australia</p>
 				<p class="text-primary-700 mb-4 leading-relaxed">
           Developed and maintained the company website, improving user experience and implementing SEO strategies.
 				</p>
@@ -64,21 +64,6 @@
         </ul>
 			</div>
 
-			<!-- Softpedia -->
-			<div class="relative pl-8 md:pl-12">
-				<div
-					class="bg-primary-300 absolute -left-[9px] top-2 h-4 w-4 rounded-full ring-4 ring-white"
-				></div>
-				<div class="mb-2 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-					<h3 class="text-primary-900 text-2xl font-bold">Certified Clean Software </h3>
-					<span class="text-primary-500 font-mono text-sm">2025</span>
-				</div>
-				<p class="text-primary-600 mb-2 font-serif text-lg italic">Softpedia</p>
-				<p class="text-primary-700 mb-4 leading-relaxed">
-					Recognized for code quality, security practices, and software reliability standards.
-				</p>
-			</div>
-
 			<!-- Football Victoria -->
 			<div class="relative pl-8 md:pl-12">
 				<div
@@ -88,7 +73,7 @@
 					<h3 class="text-primary-900 text-2xl font-bold">FV Level 4 Match Official</h3>
 					<span class="text-primary-500 font-mono text-sm">2023 - 2025</span>
 				</div>
-				<p class="text-primary-600 mb-2 font-serif text-lg italic">Football Victoria</p>
+				<p class="text-primary-600 mb-2 font-serif text-lg italic">Football Victoria • Melbourne, Australia</p>
 				<p class="text-primary-700 mb-4 leading-relaxed">
 					Officiating football matches, ensuring fair play, rule compliance, and contributing to the
 					integrity of sports events.
@@ -118,7 +103,7 @@
 					<h3 class="text-primary-900 text-2xl font-bold">Camera Operator</h3>
 					<span class="text-primary-500 font-mono text-sm">2022</span>
 				</div>
-				<p class="text-primary-600 mb-2 font-serif text-lg italic">battlegame.gg</p>
+				<p class="text-primary-600 mb-2 font-serif text-lg italic">battlegame.gg • Tehran, Iran</p>
 				<p class="text-primary-700 mb-4 leading-relaxed">
 					Captured video content for esports events, managed equipment, and collaborated with
 					production teams.
