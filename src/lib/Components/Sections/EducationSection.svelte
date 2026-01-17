@@ -5,7 +5,6 @@
 			<h2 class="font-serif text-5xl font-bold text-primary-950 md:text-6xl lg:text-7xl">
 				Education & Certificates
 			</h2>
-			<div class="mx-auto mt-6 h-1 w-24 bg-gradient-to-r from-accent-500 to-secondary-500"></div>
 		</div>
 
 		<!-- Education Section -->
@@ -145,56 +144,72 @@
 		<!-- Certificates Section -->
 		<div>
 			<h3 class="mb-12 flex items-center gap-3 text-2xl font-bold text-primary-900 md:text-3xl">
-				<span class="flex h-10 w-10 items-center justify-center rounded-full bg-secondary-100">
-					<svg class="h-6 w-6 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-					</svg>
+				<span class="flex h-10 w-10 items-center justify-center rounded-full bg-accent-100">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-accent-600" viewBox="0 -960 960 960" width="24px"><path d="M720-80H80v-880h640v160h160v720H720v-160Zm-80-80v-80h80v80h-80Zm0-160v-80h80v80h-80Zm0-160v-80h80v80h-80ZM160-160h400v-640H160v640Zm0-720h400v-80H160v80Z"/></svg>
 				</span>
 				Certifications & Awards
 			</h3>
 
-			<div class="grid gap-6 md:grid-cols-2">
+			<div class="grid gap-8 md:grid-cols-3">
 				<!-- Certificate 1 -->
-				<div class="group relative overflow-hidden rounded-2xl bg-secondary-100 p-8 shadow-lg transition-all duration-300 hover:shadow-2xl md:p-10">
-					<div class="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-accent-500 via-primary-500 to-accent-500"></div>
-
-					<div class="mb-4 flex items-start justify-between">
-						<div class="flex-1">
-							<h4 class="text-xl font-bold text-primary-900 md:text-2xl">Certified Clean Software</h4>
-							<p class="mt-1 text-sm font-medium text-secondary-600">Softpedia</p>
+				<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-accent-50 to-accent-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+					<!-- Certificate Badge/Image Area -->
+					<div class="flex h-40 items-center justify-center bg-gradient-to-b from-accent-200 to-accent-100 p-6">
+						<div class="flex h-24 w-24 items-center justify-center rounded-full bg-background shadow-md">
+							<span class="text-4xl">🛡️</span>
 						</div>
-						<svg class="h-8 w-8 text-accent-500 opacity-20" fill="currentColor" viewBox="0 0 20 20">
-							<path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
-						</svg>
 					</div>
 
-					<p class="mb-3 text-sm font-medium text-primary-600">2025</p>
-					<p class="leading-relaxed text-primary-700">
-						Recognition for code quality, security practices, and software reliability standards.
-					</p>
+					<!-- Content Area -->
+					<div class="flex flex-1 flex-col p-6">
+						<p class="mb-2 text-xs font-semibold uppercase tracking-wide text-accent-700">Softpedia</p>
+						<h4 class="mb-3 text-lg font-bold text-primary-900">Certified Clean Software</h4>
+						<p class="mb-4 flex-1 text-sm leading-relaxed text-primary-700">
+							Recognition for code quality, security practices, and software reliability standards.
+						</p>
+						<p class="text-xs font-semibold text-accent-600">2025</p>
+					</div>
 				</div>
 
 				<!-- Certificate 2 -->
-				<div class="group relative overflow-hidden rounded-2xl bg-secondary-100 p-8 shadow-lg transition-all duration-300 hover:shadow-2xl md:p-10">
-					<div class="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-secondary-500 via-accent-500 to-secondary-500"></div>
-
-					<div class="mb-4 flex items-start justify-between">
-						<div class="flex-1">
-							<h4 class="text-xl font-bold text-primary-900 md:text-2xl">FV Level 4 Match Official</h4>
-							<p class="mt-1 text-sm font-medium text-secondary-600">Football Victoria</p>
+				<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-secondary-50 to-secondary-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+					<!-- Certificate Badge/Image Area -->
+					<div class="flex h-40 items-center justify-center bg-gradient-to-b from-secondary-200 to-secondary-100 p-6">
+						<div class="flex h-24 w-24 items-center justify-center rounded-full bg-background shadow-md">
+							<span class="text-4xl">⚽</span>
 						</div>
-						<svg class="h-8 w-8 text-secondary-500 opacity-20" fill="currentColor" viewBox="0 0 20 20">
-							<path fill-rule="evenodd" d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 1015.5 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.025a.75.75 0 101.06-1.06l-3.25-3.35a.75.75 0 00-1.06 0l-3.25 3.35a.75.75 0 001.06 1.06l1.95-2.025v4.59z" clip-rule="evenodd" />
-						</svg>
 					</div>
 
-					<p class="mb-3 text-sm font-medium text-primary-600">2023 - 2025</p>
-					<p class="leading-relaxed text-primary-700">
-						Advanced officiating certification with expertise in game management and conflict resolution.
-					</p>
+					<!-- Content Area -->
+					<div class="flex flex-1 flex-col p-6">
+						<p class="mb-2 text-xs font-semibold uppercase tracking-wide text-secondary-700">Football Victoria</p>
+						<h4 class="mb-3 text-lg font-bold text-primary-900">FV Level 4 Match Official</h4>
+						<p class="mb-4 flex-1 text-sm leading-relaxed text-primary-700">
+							Advanced officiating certification with expertise in game management and conflict resolution.
+						</p>
+						<p class="text-xs font-semibold text-secondary-600">2023 - 2025</p>
+					</div>
 				</div>
 
-				<!-- Add more certificates as needed -->
+				<!-- Certificate 3 - Template for adding more -->
+				<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-primary-50 to-primary-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+					<!-- Certificate Badge/Image Area -->
+					<div class="flex h-40 items-center justify-center bg-gradient-to-b from-primary-200 to-primary-100 p-6">
+						<div class="flex h-24 w-24 items-center justify-center rounded-full bg-background shadow-md">
+							<span class="text-4xl">🏆</span>
+						</div>
+					</div>
+
+					<!-- Content Area -->
+					<div class="flex flex-1 flex-col p-6">
+						<p class="mb-2 text-xs font-semibold uppercase tracking-wide text-primary-700">Add Your Certification</p>
+						<h4 class="mb-3 text-lg font-bold text-primary-900">Certificate Title</h4>
+						<p class="mb-4 flex-1 text-sm leading-relaxed text-primary-700">
+							Add your certificate description here.
+						</p>
+						<p class="text-xs font-semibold text-primary-600">Year</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
