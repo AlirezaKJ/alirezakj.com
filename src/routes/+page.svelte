@@ -18,6 +18,6 @@
 
 <EducationSection />
 
-<ServicesSection />
+<!-- <ServicesSection /> -->
 
 <ContactSection />
