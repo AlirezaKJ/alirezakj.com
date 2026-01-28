@@ -152,11 +152,11 @@
 			</h3>
 
 			<div class="grid gap-8 md:grid-cols-3">
-				<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-accent-50 to-accent-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+				<a href="/assets/certs/meta-frontend.pdf" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-accent-50 to-accent-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
 					<!-- Certificate Badge/Image Area -->
 					<div class="flex h-40 items-center justify-center bg-gradient-to-b from-accent-200 to-accent-100 p-6">
 						<div class="flex h-24 w-24 items-center justify-center rounded-full bg-background shadow-md">
-							<span class="text-4xl">🛡️</span>
+							<span class="text-4xl">💻</span>
 						</div>
 					</div>
 
@@ -169,13 +169,13 @@
 						</p>
 						<p class="text-xs font-semibold text-accent-600">2025</p>
 					</div>
-				</div>
+				</a>
 
-				<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-secondary-50 to-secondary-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+				<a href="/assets/certs/swinburne-cert3.pdf" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-secondary-50 to-secondary-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
 					<!-- Certificate Badge/Image Area -->
 					<div class="flex h-40 items-center justify-center bg-gradient-to-b from-secondary-200 to-secondary-100 p-6">
 						<div class="flex h-24 w-24 items-center justify-center rounded-full bg-background shadow-md">
-							<span class="text-4xl">⚽</span>
+							<span class="text-4xl">🎓</span>
 						</div>
 					</div>
 
@@ -188,13 +188,12 @@
 						</p>
 						<p class="text-xs font-semibold text-secondary-600">2025</p>
 					</div>
-				</div>
-
-				<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-secondary-50 to-secondary-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+				</a>
+				<a href="https://www.softpedia.com/get/Multimedia/Audio/Audio-Players/BetterSoundCloud.shtml#status" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-secondary-50 to-secondary-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
 					<!-- Certificate Badge/Image Area -->
 					<div class="flex h-40 items-center justify-center bg-gradient-to-b from-secondary-200 to-secondary-100 p-6">
 						<div class="flex h-24 w-24 items-center justify-center rounded-full bg-background shadow-md">
-							<span class="text-4xl">⚽</span>
+							<span class="text-4xl">🧹</span>
 						</div>
 					</div>
 
@@ -207,13 +206,13 @@
 						</p>
 						<p class="text-xs font-semibold text-secondary-600">2025</p>
 					</div>
-				</div>
+				</a>
 
-				<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-secondary-50 to-secondary-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+				<a href="/assets/certs/parade-media.pdf" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-secondary-50 to-secondary-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
 					<!-- Certificate Badge/Image Area -->
 					<div class="flex h-40 items-center justify-center bg-gradient-to-b from-secondary-200 to-secondary-100 p-6">
 						<div class="flex h-24 w-24 items-center justify-center rounded-full bg-background shadow-md">
-							<span class="text-4xl">⚽</span>
+							<span class="text-4xl">📹</span>
 						</div>
 					</div>
 
@@ -226,13 +225,13 @@
 						</p>
 						<p class="text-xs font-semibold text-secondary-600">2024</p>
 					</div>
-				</div>
+				</a>
 
-				<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-secondary-50 to-secondary-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+				<a href="/assets/certs/football-victoria.pdf" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-secondary-50 to-secondary-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
 					<!-- Certificate Badge/Image Area -->
 					<div class="flex h-40 items-center justify-center bg-gradient-to-b from-secondary-200 to-secondary-100 p-6">
 						<div class="flex h-24 w-24 items-center justify-center rounded-full bg-background shadow-md">
-							<span class="text-4xl">⚽</span>
+							<span class="text-4xl">🧑‍⚖</span>
 						</div>
 					</div>
 
@@ -245,13 +244,13 @@
 						</p>
 						<p class="text-xs font-semibold text-secondary-600">2023</p>
 					</div>
-				</div>
+				</a>
 
-				<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-primary-50 to-primary-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+				<a href="/assets/certs/iran-web-design.pdf" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-primary-50 to-primary-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
 					<!-- Certificate Badge/Image Area -->
 					<div class="flex h-40 items-center justify-center bg-gradient-to-b from-primary-200 to-primary-100 p-6">
 						<div class="flex h-24 w-24 items-center justify-center rounded-full bg-background shadow-md">
-							<span class="text-4xl">🏆</span>
+							<span class="text-4xl">🧑‍🎨</span>
 						</div>
 					</div>
 
@@ -264,7 +263,7 @@
 						</p>
 						<p class="text-xs font-semibold text-primary-600">2022</p>
 					</div>
-				</div>
+				</a>
 			</div>
 		</div>
 	</div>

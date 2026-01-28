@@ -1,4 +1,4 @@
-<section class="contact min-h-screen flex items-center">
+<section class="contact flex items-center">
   <div class="max-w-[var(--keyw)] mx-auto w-full">
     <div class="grid md:grid-cols-2 gap-16 items-center">
       

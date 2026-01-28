@@ -14,7 +14,7 @@
 </script>
 
 <nav class="flex justify-end items-center w-full h-36 px-6 z-1">
-  <div class={`transition-all duration-500 fixed top-0 z-1 ${ontop || onbottom ? 'left-30' : 'left-6'}`} style={onbottom ? 'top: calc(100vh - 11rem);' : ''}> <!-- 6 (24) + 12 (48) + 12 (48) = 120 -->
+  <div class={`transition-all duration-500 fixed top-0 z-1 ${ontop || onbottom ? 'left-30' : 'left-6'}`} style={onbottom ? 'top: calc(100vh - 10.5rem);' : ''}> <!-- 6 (24) + 12 (48) + 12 (48) = 120 -->
     <a href="/" on:click={scrollToTop} class="font-serif flex justify-center items-center h-36">
       <div id="letter" class={`flex justify-center items-center transition-all duration-500 ${ontop || onbottom ? 'w-full' : 'w-12 h-12'}`}>
         <span class={`flex mix-blend-difference transition-all duration-500 text-6xl leading-loose`}>A<span class={`${ontop || onbottom ? 'w-full' : 'w-0'} transition-all duration-500 overflow-hidden whitespace-nowrap`} id="fullname">lireza Karimi Jafari</span></span>
