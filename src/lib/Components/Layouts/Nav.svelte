@@ -7,7 +7,7 @@
   }
 
   $: ontop = $scrollState.scroll < 1;
-  $: onbottom = $scrollState.scroll >= $scrollState.limit - 1;
+  $: onbottom = $scrollState.limit > 0 && $scrollState.scroll >= $scrollState.limit - 1;
   $: scrollingDirection = $scrollState.direction; // 1: down, 0: idle, -1: up
 
   $: console.log(scrollingDirection);
