@@ -1,5 +1,5 @@
-<section class="min-h-screen bg-background px-6 py-20 md:px-20 md:py-32">
-	<div class="mx-auto max-w-5xl">
+<section class="min-h-screen bg-background py-20 md:py-32">
+	<div class="mx-auto max-w-[var(--keyw)]">
 		<!-- Section Header -->
 		<div class="mb-24 text-center">
 			<h2 class="font-serif text-5xl font-bold text-primary-950 md:text-6xl lg:text-7xl">

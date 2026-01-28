@@ -1,5 +1,5 @@
-<section class="contact py-24 px-6 md:px-20 bg-primary-50 min-h-screen flex items-center">
-  <div class="max-w-7xl mx-auto w-full">
+<section class="contact min-h-screen flex items-center">
+  <div class="max-w-[var(--keyw)] mx-auto w-full">
     <div class="grid md:grid-cols-2 gap-16 items-center">
       
       <!-- Contact Info -->
@@ -68,7 +68,7 @@
             <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-primary-200 focus:border-accent-500 focus:ring-2 focus:ring-accent-200 outline-none transition-all" placeholder="Tell me about your project..."></textarea>
           </div>
 
-          <button type="submit" class="w-full bg-primary-900 text-white font-bold py-4 rounded-xl hover:bg-accent-600 transition-colors duration-300 shadow-lg shadow-primary-900/20">
+          <button type="submit" class="w-full bg-primary-200 text-text font-bold py-4 rounded-xl hover:bg-accent-500 transition-colors duration-300 shadow-lg shadow-primary-50">
             Send Message
           </button>
         </form>
