@@ -1,5 +1,5 @@
 <div class="skills pb-24">
-  <div class="max-w-[var(--keyw)] mx-auto">
+  <div class="w-7xl max-w-[var(--keyw)] mx-auto">
     <h2 class="font-serif text-5xl md:text-7xl font-bold mb-16 text-primary-950 text-center">Skills & Expertise</h2>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

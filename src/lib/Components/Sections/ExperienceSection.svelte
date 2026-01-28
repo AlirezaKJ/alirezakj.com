@@ -1,5 +1,5 @@
 <section class="experiences min-h-screen py-24">
-	<div class="mx-auto max-w-[var(--keyw)]">
+	<div class="mx-auto w-7xl max-w-[var(--keyw)]">
 		<h2 class="text-primary-950 mb-20 text-center font-serif text-5xl font-bold md:text-7xl">
 			Work Experience
 		</h2>
