@@ -384,3 +384,36 @@
   /* (optional) convenient aliases so bg-primary uses 500 by default
   */
 }
+
+/* BetterSoundCloud Page Specific Colors */
+.bsc-page {
+  /* SoundCloud Orange */
+  --sc-orange: #ff5500;
+  --sc-orange-light: #ff7733;
+  --sc-orange-dark: #cc4400;
+  --sc-orange-50: #fff5f0;
+  --sc-orange-100: #ffe5d9;
+  --sc-orange-200: #ffccb3;
+  --sc-orange-300: #ffaa7a;
+  --sc-orange-400: #ff7733;
+  --sc-orange-500: #ff5500;
+  --sc-orange-600: #e64d00;
+  --sc-orange-700: #cc4400;
+  --sc-orange-800: #b33c00;
+  --sc-orange-900: #993300;
+  
+  /* SoundCloud Dark Grays */
+  --sc-dark: #333333;
+  --sc-darker: #111111;
+  --sc-gray-50: #f9f9f9;
+  --sc-gray-100: #f0f0f0;
+  --sc-gray-200: #e0e0e0;
+  --sc-gray-300: #cccccc;
+  --sc-gray-400: #999999;
+  --sc-gray-500: #666666;
+  --sc-gray-600: #555555;
+  --sc-gray-700: #444444;
+  --sc-gray-800: #333333;
+  --sc-gray-900: #222222;
+  --sc-gray-950: #111111;
+}

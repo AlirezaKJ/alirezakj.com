@@ -16,6 +16,15 @@
 		const lenis = new Lenis();
 		lenisStore.set(lenis);
 
+		// Set initial scroll state with current position
+		scrollState.set({
+			scroll: lenis.scroll,
+			limit: lenis.limit,
+			velocity: lenis.velocity,
+			direction: 0,
+			progress: lenis.progress
+		});
+
 		lenis.on('scroll', (e) => {
 			ScrollTrigger.update(e);
 			scrollState.set({
