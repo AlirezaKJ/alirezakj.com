@@ -2,14 +2,23 @@
   
   <div class="max-w-[var(--keyw)] mx-auto w-full">
     <!-- Hero Header -->
-    <div class="space-y-6 animate-fade-in-up">
-      <h1 class="font-serif text-6xl md:text-8xl lg:text-9xl font-bold leading-none tracking-tight text-primary-950">
-        <span class="block">Web Developer</span>
-        <span class="block text-primary-600">& Designer</span>
-      </h1>
-      <p class="text-xl md:text-3xl text-primary-800 font-light max-w-4xl tracking-wide">
-        Crafting Digital Experiences
-      </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+      <div class="space-y-6 animate-fade-in-up">
+        <h1 class="font-serif text-6xl md:text-8xl lg:text-9xl font-bold leading-none tracking-tight text-primary-950">
+          <span class="block">Web Developer</span>
+          <span class="block text-primary-600">& Photographer</span>
+        </h1>
+        <p class="text-xl md:text-3xl text-primary-800 font-light max-w-4xl tracking-wide">
+          Crafting Digital Experiences
+        </p>
+      </div>
+      <div class="flex justify-center md:justify-end animate-fade-in-up">
+        <img 
+          src="/assets/images/blued portrait.jpg" 
+          alt="Alireza Portrait" 
+          class="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-lg"
+        />
+      </div>
     </div>
 
     <!-- Intro Text -->
@@ -34,7 +43,7 @@
             {#each [
               'Full-stack web development',
               'UI/UX design principles',
-              'Responsive design',
+              'Photography & visual storytelling',
               'Version control (Git)',
               'Cloud deployment',
               'Cybersecurity fundamentals'

@@ -397,7 +397,7 @@
   </section>
 
   <!-- Technical Details & Community Stats -->
-  <section class="w-full py-24 bg-gradient-to-b from-primary-50 to-background">
+  <section class="w-full py-24 bg-gradient-to-tr from-[var(--sc-orange-950)] via-background to-background">
     <div class="max-w-[var(--keyw)] mx-auto w-full px-6">
       <div class="grid md:grid-cols-2 gap-12">
         <!-- Technical Stack -->
@@ -487,7 +487,7 @@
   </section>
 
   <!-- Final CTA -->
-  <section class="w-full py-32 bg-gradient-to-br from-[var(--sc-orange-50)] via-background to-background">
+  <section class="w-full py-32 bg-gradient-to-br from-[var(--sc-orange-950)] via-background to-background">
     <div class="max-w-[var(--keyw)] mx-auto w-full px-6">
       <div class="text-center space-y-8">
         <h2 class="text-5xl md:text-7xl font-serif font-bold">
