@@ -4,7 +4,7 @@
 
 </script>
 
-<section class="projects py-24 text-text min-h-screen">
+<section id="projects" class="projects py-24 text-text min-h-screen">
   <div class="max-w-[var(--keyw)] mx-auto">
     <h2 class="font-serif text-5xl md:text-7xl font-bold mb-16 text-center">Projects & Works</h2>
 

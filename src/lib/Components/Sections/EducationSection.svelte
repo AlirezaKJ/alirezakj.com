@@ -79,65 +79,7 @@
 					</p> -->
 				</div>
 
-				<!-- Soroush Secondary School -->
-				<div class="group relative overflow-hidden rounded-2xl bg-secondary-100 p-8 shadow-lg transition-all duration-300 hover:shadow-2xl md:p-10">
-					<div class="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-secondary-500 via-accent-400 to-secondary-500"></div>
-
-					<div class="mb-6 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
-						<div class="flex-1">
-							<h4 class="text-2xl font-bold text-primary-900 md:text-3xl">Soroush Secondary School</h4>
-							<p class="mt-1 text-sm font-medium text-secondary-600">Tehran, Iran</p>
-						</div>
-						<span class="inline-flex items-center rounded-full bg-accent-200 px-4 py-2 text-xs font-semibold text-primary-700 md:text-sm">
-							Year 10
-						</span>
-					</div>
-
-					<p class="mb-4 text-sm font-medium text-primary-600">Completed • 2022</p>
-					<!-- <p class="leading-relaxed text-primary-700">
-						Completed Year 10 education with focus on academic excellence and foundational knowledge in various subjects.
-					</p> -->
-				</div>
-
-				<!-- Mofid Secondary School -->
-				<div class="group relative overflow-hidden rounded-2xl bg-secondary-100 p-8 shadow-lg transition-all duration-300 hover:shadow-2xl md:p-10">
-					<div class="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-accent-400 via-secondary-500 to-accent-400"></div>
-
-					<div class="mb-6 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
-						<div class="flex-1">
-							<h4 class="text-2xl font-bold text-primary-900 md:text-3xl">Mofid Secondary School</h4>
-							<p class="mt-1 text-sm font-medium text-secondary-600">Tehran, Iran</p>
-						</div>
-						<span class="inline-flex items-center rounded-full bg-accent-200 px-4 py-2 text-xs font-semibold text-primary-700 md:text-sm">
-							Year 7-9
-						</span>
-					</div>
-
-					<p class="mb-4 text-sm font-medium text-primary-600">Completed • 2018 - 2021</p>
-					<!-- <p class="leading-relaxed text-primary-700">
-						Completed secondary education with strong performance across multiple disciplines including mathematics, sciences, and humanities.
-					</p> -->
-				</div>
-
-				<!-- Mofid Primary School -->
-				<div class="group relative overflow-hidden rounded-2xl bg-secondary-100 p-8 shadow-lg transition-all duration-300 hover:shadow-2xl md:p-10">
-					<div class="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-secondary-500 via-accent-400 to-primary-500"></div>
-
-					<div class="mb-6 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
-						<div class="flex-1">
-							<h4 class="text-2xl font-bold text-primary-900 md:text-3xl">Mofid Primary School</h4>
-							<p class="mt-1 text-sm font-medium text-secondary-600">Tehran, Iran</p>
-						</div>
-						<span class="inline-flex items-center rounded-full bg-accent-200 px-4 py-2 text-xs font-semibold text-primary-700 md:text-sm">
-							Year 1-6
-						</span>
-					</div>
-
-					<p class="mb-4 text-sm font-medium text-primary-600">Completed • 2012 - 2018</p>
-					<!-- <p class="leading-relaxed text-primary-700">
-						Completed primary education with a solid foundation in core subjects and development of fundamental academic skills.
-					</p> -->
-				</div>
+				
 			</div>
 		</div>
 

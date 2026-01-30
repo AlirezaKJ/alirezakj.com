@@ -38,6 +38,15 @@
     { name: 'BetterSoundCloud', href: '/bsc' },
     { name: 'PeriodicTable', href: 'https://ptable.alirezakj.com/' }
   ];
+
+  const portfolioLinks = [
+    { name: 'About', href: '/#header' },
+    { name: 'Skills', href: '/#skills' },
+    { name: 'Projects', href: '/#projects' },
+    { name: 'Experiences', href: '/#experiences' },
+    { name: 'Education', href: '/#education' },
+    { name: 'Contact Me', href: '/#contact' }
+  ]
 </script>
 
 <nav class="flex justify-end items-center w-full h-36 px-6 z-1">
@@ -77,22 +86,45 @@
   <div class="h-36"></div>
 
   <!-- Menu Content -->
-  <div class="max-w-[var(--keyw)] mx-auto w-full">
-    <!-- Navigation Links -->
-    <div class="">
-      <h2 class="font-serif text-2xl font-bold text-primary-800 mb-8">Navigation</h2>
-      <div class="space-y-6">
-        {#each navLinks as link}
-          <a 
-            href={link.href} 
-            on:click={closeMenu}
-            class="block text-4xl font-bold text-primary-950 hover:text-primary-600 transition-colors duration-300 font-serif"
-          >
-            {link.name}
-          </a>
-        {/each}
+  <div class="max-w-[var(--keyw)] mx-auto w-full flex flex-col justify-center items-start space-y-12">
+    
+    <div class="links grid grid-cols-2 w-full gap-6">
+
+      <!-- Portfolio Links -->
+      <div class="">
+        <h2 class="font-serif text-4xl font-bold text-primary-800 mb-6">Portfolio</h2>
+        <div class="space-y-6">
+          {#each portfolioLinks as link}
+            <a 
+              href={link.href} 
+              on:click={closeMenu}
+              class="block text-4xl font-bold text-primary-950 hover:text-primary-600 transition-colors duration-300 font-serif"
+            >
+              {link.name}
+            </a>
+          {/each}
+        </div>
       </div>
+
+      <!-- Navigation Links -->
+      <div class="">
+        <h2 class="font-serif text-2xl font-bold text-primary-800 mb-6">Navigation</h2>
+        <div class="space-y-6">
+          {#each navLinks as link}
+            <a 
+              href={link.href} 
+              on:click={closeMenu}
+              class="block text-4xl font-bold text-primary-950 hover:text-primary-600 transition-colors duration-300 font-serif"
+            >
+              {link.name}
+            </a>
+          {/each}
+        </div>
+      </div>
+
     </div>
+    
+
 
   </div>
 </div>

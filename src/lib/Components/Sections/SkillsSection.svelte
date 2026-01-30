@@ -1,4 +1,4 @@
-<div class="skills pb-24">
+<div id="skills" class="skills pb-24">
   <div class="w-7xl max-w-[var(--keyw)] mx-auto">
     <h2 class="font-serif text-5xl md:text-7xl font-bold mb-16 text-primary-950 text-center">Skills & Expertise</h2>
 

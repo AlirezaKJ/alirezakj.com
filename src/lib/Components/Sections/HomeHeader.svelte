@@ -1,4 +1,4 @@
-<header class="about flex flex-col justify-start relative overflow-hidden pb-36">
+<header id="header" class="about flex flex-col justify-start relative overflow-hidden pb-36">
   
   <div class="max-w-[var(--keyw)] mx-auto w-full">
     <!-- Hero Header -->
