@@ -1,4 +1,4 @@
-<section class="min-h-screen bg-background py-20 md:py-32">
+<section id="education" class="min-h-screen bg-background py-20 md:py-32">
 	<div class="mx-auto w-7xl max-w-[var(--keyw)]">
 		<!-- Section Header -->
 		<div class="mb-24 text-center">

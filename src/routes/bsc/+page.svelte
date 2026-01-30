@@ -4,6 +4,54 @@
   
   let expandedFaq = null;
   let expandedFeature = 'current'; // 'current' or 'upcoming'
+  let starCount = 242; // fallback value
+  let forkCount = 14; // fallback value
+  let contributorCount = 4; // fallback value
+  let releaseCount = 10; // fallback value
+  let jsPercentage = 26.9; // fallback value
+  let cssPercentage = 56.2; // fallback value
+  let htmlPercentage = 16.9; // fallback value
+  
+  onMount(async () => {
+    try {
+      // Fetch repository stats
+      const repoResponse = await fetch('https://api.github.com/repos/AlirezaKJ/BetterSoundCloud');
+      if (repoResponse.ok) {
+        const repoData = await repoResponse.json();
+        starCount = repoData.stargazers_count;
+        forkCount = repoData.forks_count;
+      }
+      
+      // Fetch contributors count
+      const contributorsResponse = await fetch('https://api.github.com/repos/AlirezaKJ/BetterSoundCloud/contributors');
+      if (contributorsResponse.ok) {
+        const contributorsData = await contributorsResponse.json();
+        contributorCount = contributorsData.length;
+      }
+      
+      // Fetch releases count
+      const releasesResponse = await fetch('https://api.github.com/repos/AlirezaKJ/BetterSoundCloud/releases');
+      if (releasesResponse.ok) {
+        const releasesData = await releasesResponse.json();
+        releaseCount = releasesData.length;
+      }
+      
+      // Fetch language statistics
+      const languagesResponse = await fetch('https://api.github.com/repos/AlirezaKJ/BetterSoundCloud/languages');
+      if (languagesResponse.ok) {
+        const languagesData = await languagesResponse.json();
+        const totalBytes = Object.values(languagesData).reduce((sum, bytes) => sum + bytes, 0);
+        
+        if (totalBytes > 0) {
+          jsPercentage = ((languagesData.JavaScript || 0) / totalBytes * 100).toFixed(1);
+          cssPercentage = ((languagesData.CSS || 0) / totalBytes * 100).toFixed(1);
+          htmlPercentage = ((languagesData.HTML || 0) / totalBytes * 100).toFixed(1);
+        }
+      }
+    } catch (error) {
+      console.error('Failed to fetch GitHub stats:', error);
+    }
+  });
   
   function toggleFaq(index) {
     expandedFaq = expandedFaq === index ? null : index;
@@ -70,7 +118,7 @@
   <section class="w-full py-12">
     <div class="max-w-[var(--keyw)] mx-auto w-full px-6">
       <div class="flex flex-col items-center text-center space-y-8">
-        <div class="inline-flex items-center space-x-3 bg-gradient-to-r from-[var(--sc-orange-100)] to-accent-100 px-6 py-3 rounded-full">
+        <div class="inline-flex items-center space-x-3 bg-gradient-to-r from-[var(--sc-orange-100)] to-[var(--sc-orange-200)] px-6 py-3 rounded-full">
           <svg class="w-6 h-6" style="fill: var(--sc-orange-600);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
           <span class="text-sm font-semibold" style="color: var(--sc-orange-700);">100% Virus-Free • Verified by Softpedia</span>
         </div>
@@ -89,12 +137,11 @@
         
         <div class="flex flex-col sm:flex-row gap-4 mt-8">
           <a href="https://github.com/AlirezaKJ/BetterSoundCloud/releases" target="_blank" rel="noopener" 
-             class="px-8 py-4 rounded-xl font-bold text-lg text-white transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
-             style="background: linear-gradient(135deg, var(--sc-orange-500), var(--sc-orange-600));">
+          class="px-8 py-4 rounded-xl font-bold text-lg text-white bg-[var(--sc-orange-600)] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
             Download Now
           </a>
           <a href="https://github.com/AlirezaKJ/BetterSoundCloud" target="_blank" rel="noopener"
-             class="px-8 py-4 bg-primary-50 hover:bg-primary-100 border-2 border-primary-200 hover:border-primary-300 rounded-xl font-bold text-lg text-primary-700 transition-all duration-300 hover:shadow-lg">
+          class="px-8 py-4 bg-primary-50 hover:bg-primary-100 border-2 border-primary-200 hover:border-primary-300 rounded-xl font-bold text-lg text-primary-700 transition-all duration-300 hover:shadow-lg">
             View on GitHub
           </a>
         </div>
@@ -102,7 +149,7 @@
         <div class="flex flex-wrap justify-center gap-6 mt-12 text-sm text-text/50">
           <div class="flex items-center space-x-2">
             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-            <span>242 Stars</span>
+            <span>{starCount.toLocaleString()} Stars</span>
           </div>
           <div class="flex items-center space-x-2">
             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
@@ -420,15 +467,15 @@
                 </div>
                 <div class="flex items-center space-x-3">
                   <span class="inline-flex items-center rounded-full px-4 py-2 text-sm font-semibold bg-yellow-100 text-yellow-700">JavaScript</span>
-                  <span class="text-text/60">26.9%</span>
+                  <span class="text-text/60">{jsPercentage}%</span>
                 </div>
                 <div class="flex items-center space-x-3">
                   <span class="inline-flex items-center rounded-full px-4 py-2 text-sm font-semibold bg-blue-200 text-blue-700">CSS</span>
-                  <span class="text-text/60">56.2%</span>
+                  <span class="text-text/60">{cssPercentage}%</span>
                 </div>
                 <div class="flex items-center space-x-3">
                   <span class="inline-flex items-center rounded-full px-4 py-2 text-sm font-semibold bg-[var(--sc-orange-200)] text-orange-700">HTML</span>
-                  <span class="text-text/60">16.9%</span>
+                  <span class="text-text/60">{htmlPercentage}%</span>
                 </div>
               </div>
             </div>
@@ -454,7 +501,7 @@
                 <span class="text-text/60">GitHub Stars</span>
                 <svg class="w-6 h-6 text-accent-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
               </div>
-              <p class="text-5xl font-bold text-primary-600">242</p>
+              <p class="text-5xl font-bold text-primary-600">{starCount.toLocaleString()}</p>
             </div>
             
             <div class="bg-primary-100 rounded-2xl p-8 border border-primary-100 shadow-md">
@@ -462,7 +509,7 @@
                 <span class="text-text/60">Active Forks</span>
                 <svg class="w-6 h-6" style="fill: var(--sc-orange-500);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12-12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
               </div>
-              <p class="text-5xl font-bold" style="color: var(--sc-orange-600);">14</p>
+              <p class="text-5xl font-bold" style="color: var(--sc-orange-600);">{forkCount.toLocaleString()}</p>
             </div>
             
             <div class="bg-primary-100 rounded-2xl p-8 border border-primary-100 shadow-md">
@@ -470,7 +517,7 @@
                 <span class="text-text/60">Contributors</span>
                 <svg class="w-6 h-6 text-secondary-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
               </div>
-              <p class="text-5xl font-bold text-secondary-600">4+</p>
+              <p class="text-5xl font-bold text-secondary-600">{contributorCount}+</p>
             </div>
             
             <div class="bg-primary-100 rounded-2xl p-8 border border-primary-100 shadow-md">
@@ -478,7 +525,7 @@
                 <span class="text-text/60">Total Releases</span>
                 <svg class="w-6 h-6 text-accent-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
               </div>
-              <p class="text-5xl font-bold text-accent-600">10+</p>
+              <p class="text-5xl font-bold text-accent-600">{releaseCount}+</p>
             </div>
           </div>
         </div>
