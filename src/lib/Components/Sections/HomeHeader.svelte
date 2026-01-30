@@ -2,7 +2,7 @@
   
   <div class="max-w-[var(--keyw)] mx-auto w-full">
     <!-- Hero Header -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+    <div class="flex gap-8 md:gap-12 justify-between items-start">
       <div class="space-y-6 animate-fade-in-up">
         <h1 class="font-serif text-6xl md:text-8xl lg:text-9xl font-bold leading-none tracking-tight text-primary-950">
           <span class="block">Web Developer</span>
