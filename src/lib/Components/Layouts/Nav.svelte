@@ -3,6 +3,7 @@
 
   let expandBottom = false;
   let menuOpen = false;
+  let expandTimeout;
 
   function scrollToTop(e) {
     e.preventDefault();
@@ -25,10 +26,12 @@
 
   // Delay the expansion when reaching bottom
   $: if (onbottom) {
-    setTimeout(() => {
+    clearTimeout(expandTimeout);
+    expandTimeout = setTimeout(() => {
       expandBottom = true;
     }, 500);
   } else {
+    clearTimeout(expandTimeout);
     expandBottom = false;
   }
 
