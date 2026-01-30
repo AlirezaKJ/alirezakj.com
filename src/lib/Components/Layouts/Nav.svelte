@@ -39,7 +39,8 @@
     { name: 'Home', href: '/' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'BetterSoundCloud', href: '/bsc' },
-    { name: 'PeriodicTable', href: 'https://ptable.alirezakj.com/' }
+    { name: 'PeriodicTable', href: 'https://ptable.alirezakj.com/' },
+    { name: 'Font Explorer', href: 'https://fontexplorer.net/' }
   ];
 
   const portfolioLinks = [
@@ -111,7 +112,7 @@
 
       <!-- Navigation Links -->
       <div class="">
-        <h2 class="font-serif text-2xl font-bold text-primary-800 mb-6">Navigation</h2>
+        <h2 class="font-serif text-4xl font-bold text-primary-800 mb-6">Navigation</h2>
         <div class="space-y-6">
           {#each navLinks as link}
             <a 
