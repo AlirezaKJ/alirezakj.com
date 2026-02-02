@@ -14,7 +14,7 @@
       </div>
       <div class="flex justify-center md:justify-end animate-fade-in-up">
         <img 
-          src="/assets/images/blued portrait.jpg" 
+          src="/assets/images/Portrait Cropped.jpg" 
           alt="Alireza Portrait" 
           class="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-lg"
         />
