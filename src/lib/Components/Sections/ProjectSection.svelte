@@ -29,7 +29,7 @@
       <ProjectAccordion 
       name="BetterSoundCloud"  
       git="https://github.com/AlirezaKJ/BetterSoundCloud"
-      web="https://alirezakj.com/bsc/"
+      web="/bsc"
       description="BetterSoundCloud is a feature-rich desktop client for SoundCloud built with Electron.js that transforms the standard listening experience with extensive customization options and quality-of-life improvements. The application removes advertisements entirely, integrates Discord Rich Presence for social listening, and includes a built-in downloader for offline playback. Users can personalize their interface through a custom CSS and JavaScript editor, choosing from community-created themes with different color palettes. Additional features include synchronized lyrics powered by the LRCLIB API and enhanced playback controls. The project has gained significant traction with 242 stars on GitHub and has been verified as 100% clean by Softpedia, with no users reporting account bans since launch. Built primarily with CSS (56.2%), JavaScript (26.9%), and HTML (16.9%), the application is available for Windows with both portable and installer versions, plus a one-line installation script for Linux distributions."
       tags={["Electron.JS", "API", "Node.JS", "CSS", "JavaScript"]}
       date="January 2023"
