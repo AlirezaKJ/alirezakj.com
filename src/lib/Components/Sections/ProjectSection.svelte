@@ -4,9 +4,9 @@
 
 </script>
 
-<section id="projects" class="projects py-24 text-text min-h-screen">
-  <div class="max-w-[var(--keyw)] mx-auto">
-    <h2 class="font-serif text-5xl md:text-7xl font-bold mb-16 text-center">Projects & Works</h2>
+<section id="projects" class="projects py-0 md:py-12 text-text">
+  <div class="max-w-[var(--keyw)] mx-auto px-4 md:px-0">
+    <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold py-10 md:py-16 text-center">Projects & Works</h2>
 
     <div class="accordions">
 

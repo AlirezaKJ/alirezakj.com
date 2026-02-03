@@ -306,6 +306,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  :root {
+    --keyw: 100%;
+  }
+}
+
 @theme {
 
   --font-serif: "Grenze";
