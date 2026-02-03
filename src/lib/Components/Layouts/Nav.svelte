@@ -54,7 +54,7 @@
 </script>
 
 <nav class="flex justify-end items-center w-full h-36 px-4 sm:px-6 z-1">
-  <div class={`transition-all duration-500 fixed top-0 z-1 ${ontop || expandBottom || menuOpen  ? 'left-4 sm:left-6 md:left-30' : 'left-4 sm:left-6'} z-50`} style={onbottom && !menuOpen ? 'top: calc(100vh - 10.5rem);' : ''}> <!-- 6 (24) + 12 (48) + 12 (48) = 120 -->
+  <div class={`transition-all duration-500 absolute md:fixed top-0 z-1 ${ontop || expandBottom || menuOpen  ? 'left-4 md:left-30' : 'left-4'} z-50`} style={onbottom && !menuOpen ? 'top: calc(100vh - 10.5rem);' : ''}> <!-- 6 (24) + 12 (48) + 12 (48) = 120 -->
     <a href="/" on:click={scrollToTop} class="font-serif flex justify-center items-center h-36">
       <div id="letter" class={`flex justify-center items-center transition-all duration-500 ${ontop || expandBottom || menuOpen ? 'w-full' : 'w-10 h-10 sm:w-12 sm:h-12'}`}>
         <span class={`flex mix-blend-difference transition-all duration-500 text-4xl sm:text-5xl md:text-6xl leading-loose`}>A<span class={`${ontop || expandBottom || menuOpen ? 'w-full' : 'w-0'} transition-all duration-500 overflow-hidden whitespace-nowrap`} id="fullname">lireza Karimi Jafari</span></span>
@@ -67,7 +67,7 @@
     </a>
   </div>
   <div class="links flex gap-8 text-2xl">
-    <div class="icon flex fixed top-10 sm:top-12 right-4 sm:right-6 items-center justify-center w-10 h-10 sm:w-12 sm:h-12 fill-text cursor-pointer z-50" on:click={toggleMenu} on:keydown={() => {}}>
+    <div class="icon absolute md:fixed top-13.5 md:top-12 right-4 md:right-6 items-center justify-center w-10 h-10 md:w-12 md:h-12 fill-text cursor-pointer z-50" on:click={toggleMenu} on:keydown={() => {}}>
       {#if menuOpen}
         <!-- Close Button -->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="transition-all duration-300"><path d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg>
@@ -90,9 +90,9 @@
   <div class="h-36"></div>
 
   <!-- Menu Content -->
-  <div class="max-w-[var(--keyw)] mx-auto w-full flex flex-col justify-center items-start space-y-8 md:space-y-12 px-4 sm:px-6">
+  <div class="max-w-[var(--keyw)] mx-auto w-full flex flex-col justify-center items-start space-y-8 md:space-y-12 px-4 md:px-0">
     
-    <div class="links grid grid-cols-1 sm:grid-cols-2 w-full gap-6 md:gap-8">
+    <div class="links grid grid-cols-1 sm:grid-cols-2 w-full gap-4 md:gap-8">
 
       <!-- Portfolio Links -->
       <div class="">
