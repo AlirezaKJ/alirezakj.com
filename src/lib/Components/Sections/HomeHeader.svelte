@@ -25,7 +25,7 @@
     <div class="mt-4 md:mt-8 lg:mt-16 grid md:grid-cols-12 gap-8 md:gap-12">
       <div class="md:col-span-7 space-y-4 md:space-y-8 text-base md:text-lg lg:text-xl text-primary-900 leading-relaxed opacity-90">
         <p>
-          Full-stack web developer and UI/UX designer based in Melbourne, Australia. Specializing in modern web technologies, responsive design, and high-performance applications. Currently studying IT and cybersecurity fundamentals while delivering freelance projects.
+          Full-stack web developer and UI/UX designer based in Melbourne, Australia. Specializing in modern web technologies, responsive design, and high-performance applications. Currently studying IT and Cybersecurity at Swinburne University while delivering freelance projects.
         </p>
         <p>
           I'm a self-taught web developer with a passion for creating intuitive, visually appealing digital solutions. With expertise in SvelteKit, React, Tailwind CSS, and modern web standards, I build websites and applications that solve real problems while maintaining clean, maintainable code.
