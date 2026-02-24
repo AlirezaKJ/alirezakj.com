@@ -484,7 +484,7 @@ import { onMount } from 'svelte';
             Download BetterSoundCloud
           </a>
           <a href="https://github.com/AlirezaKJ/BetterSoundCloud" target="_blank" rel="noopener"
-             class="px-10 py-5 bg-white hover:bg-primary-50 border-2 border-primary-200 hover:border-primary-300 rounded-xl font-bold text-xl text-primary-700 transition-all duration-300 hover:shadow-lg">
+             class="px-10 py-5 bg-primary-50 hover:bg-primary-100 border-2 border-primary-200 hover:border-primary-300 rounded-xl font-bold text-xl text-primary-700 transition-all duration-300 hover:shadow-lg">
             Explore Source Code
           </a>
         </div>

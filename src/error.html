@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Something went wrong</title>
+		<style>
+			:root {
+				--text: #0b1518;
+				--text-700: #305c69;
+				--background: #e4eff6;
+				--background-50: #ecf4f8;
+				--primary: #1d5a72;
+				--primary-300: #85c6e0;
+				--primary-600: #2a80a2;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				margin: 0;
+				font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif;
+				background: var(--background);
+				color: var(--text);
+				min-height: 100vh;
+				display: grid;
+				place-items: center;
+				padding: 2rem;
+			}
+
+			main {
+				max-width: 640px;
+				background: color-mix(in srgb, var(--background-50) 85%, white 15%);
+				border: 1px solid var(--primary-300);
+				border-radius: 28px;
+				padding: 3rem;
+				text-align: center;
+				box-shadow: 0 30px 80px rgba(6, 20, 30, 0.18);
+			}
+
+			h1 {
+				font-size: 2.25rem;
+				margin-bottom: 0.75rem;
+			}
+
+			p {
+				margin: 0.5rem 0;
+				color: var(--text-700);
+			}
+
+			a {
+				display: inline-flex;
+				margin-top: 1.5rem;
+				padding: 0.6rem 1.6rem;
+				border-radius: 999px;
+				text-decoration: none;
+				background: var(--primary);
+				color: #fff;
+				font-weight: 600;
+			}
+
+			a:hover {
+				background: var(--primary-600);
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<h1>We’re having trouble loading this page</h1>
+			<p>Please refresh or try again in a few minutes.</p>
+			<a href="/">Back to home</a>
+		</main>
+	</body>
+</html>
