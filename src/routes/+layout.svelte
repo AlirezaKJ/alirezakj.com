@@ -1,4 +1,5 @@
 <script>
+	import { injectAnalytics } from '@vercel/analytics/sveltekit'
 	import '$lib/main.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import Footer from '$lib/Components/Layouts/Footer.svelte';
