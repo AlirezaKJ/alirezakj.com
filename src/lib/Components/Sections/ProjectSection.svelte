@@ -10,22 +10,6 @@
 
     <div class="accordions">
 
-      <!-- <ProjectAccordion 
-      name="Lenexa Medical"  
-      web="https://lenexamedical.com/"
-      description=""
-      tags={["Svelte", "TailwindCSS", "GSAP"]}
-      date="February 2026"
-      /> -->
-
-      <ProjectAccordion 
-      name="KAI-2"
-      web="https://kai2.com.au/"
-      description="I designed and developed the KAI-2 website to serve as a comprehensive digital platform that effectively communicates their multi-sector expertise while maintaining professional credibility in the competitive grants and innovation space. The website features a clean, modern interface with dedicated sections for industries, projects, services, and company information, ensuring intuitive navigation for diverse audiences including researchers, businesses, and government stakeholders. I implemented a responsive design that adapts seamlessly across devices, critical for reaching busy professionals who often browse on mobile. The site incorporates strategic content architecture with clearly defined industry pages covering clean energy, waste transformation, sustainable materials, medical technology, agriculture, and green fuels, each presenting KAI-2's value proposition with compelling calls-to-action to drive engagement. Loading animations and smooth transitions enhance the user experience while maintaining fast page performance, essential for professional service websites where first impressions matter. The website successfully positions KAI-2 as a credible, forward-thinking consultancy while providing clear pathways for potential clients to initiate contact and explore collaboration opportunities."
-      tags={["HTML", "CSS", "Responsive", "JavaScript"]}
-      date="June 2025"
-      />
-
       <ProjectAccordion 
       name="BetterSoundCloud"  
       git="https://github.com/AlirezaKJ/BetterSoundCloud"
@@ -33,6 +17,30 @@
       description="BetterSoundCloud is a feature-rich desktop client for SoundCloud built with Electron.js that transforms the standard listening experience with extensive customization options and quality-of-life improvements. The application removes advertisements entirely, integrates Discord Rich Presence for social listening, and includes a built-in downloader for offline playback. Users can personalize their interface through a custom CSS and JavaScript editor, choosing from community-created themes with different color palettes. Additional features include synchronized lyrics powered by the LRCLIB API and enhanced playback controls. The project has gained significant traction with 242 stars on GitHub and has been verified as 100% clean by Softpedia, with no users reporting account bans since launch. Built primarily with CSS (56.2%), JavaScript (26.9%), and HTML (16.9%), the application is available for Windows with both portable and installer versions, plus a one-line installation script for Linux distributions."
       tags={["Electron.JS", "API", "Node.JS", "CSS", "JavaScript"]}
       date="January 2023"
+      />
+
+      <ProjectAccordion 
+      name="Lenexa Medical"
+      web="https://lenexamedical.com/"
+      description="Lenexa Medical is a professional corporate website built for an award-winning Australian MedTech company specializing in pressure injury prevention technology for hospitals and aged care facilities. Developed with SvelteKit (Svelte 5), Tailwind CSS v4, and GSAP with ScrollTrigger, the site delivers a polished, animation-rich experience featuring smooth scrolling powered by Lenis, scroll-triggered stat counters, parallax content reveals, and fullscreen header videos. The site includes a markdown-powered blog and insights system using mdsvex, a fully functional contact form and newsletter subscription with server-side API endpoints, a 'Book a Demo' modal, an interactive world map showcasing global market presence, and a CMS admin panel for content management. Additional pages highlight the company's team and advisory board, extensive awards and recognition from organizations like TIME Magazine and the Australian AI Festival, career opportunities, and a diversity and inclusion commitment. The application is deployed on Vercel with integrated analytics and speed insights, and features a fully responsive design with a custom animated navigation bar and mobile menu."
+      tags={["SvelteKit", "TailwindCSS", "GSAP", "CMS", "API", "Analytics"]}
+      date="February 2026"
+      />
+      
+      <ProjectAccordion 
+      name="Tansotec"
+      web="https://tansotec.com.au/"
+      description="Tansotec is a corporate website built for an Australian advanced materials company specialising in graphene research and real-world industrial applications. The site serves as a professional platform bridging the gap between cutting-edge materials science and industry partners, featuring dedicated sections for research, projects, and partnerships with major institutions including RMIT, Monash, CSIRO, and Swinburne University. The homepage highlights Tansotec's flagship work developing low-cost graphene coatings for solar panels while showcasing capabilities across graphene synthesis, energy, and engineering. The site features a dynamic partner logo carousel, a slideshow of research imagery, and a clean, modern layout with smooth navigation across multiple pages. It was built from the ground up as a fully custom website, reflecting the company's positioning as a serious research and commercialisation entity with over 25 years of combined expertise and connections to more than 30 industry and academic partners across Australia."
+      tags={["SvelteKit", "TailwindCSS", "GSAP", "Analytics"]}
+      date="February 2026"
+      />
+
+      <ProjectAccordion 
+      name="KAI-2"
+      web="https://kai2.com.au/"
+      description="I designed and developed the KAI-2 website to serve as a comprehensive digital platform that effectively communicates their multi-sector expertise while maintaining professional credibility in the competitive grants and innovation space. The website features a clean, modern interface with dedicated sections for industries, projects, services, and company information, ensuring intuitive navigation for diverse audiences including researchers, businesses, and government stakeholders. I implemented a responsive design that adapts seamlessly across devices, critical for reaching busy professionals who often browse on mobile. The site incorporates strategic content architecture with clearly defined industry pages covering clean energy, waste transformation, sustainable materials, medical technology, agriculture, and green fuels, each presenting KAI-2's value proposition with compelling calls-to-action to drive engagement. Loading animations and smooth transitions enhance the user experience while maintaining fast page performance, essential for professional service websites where first impressions matter. The website successfully positions KAI-2 as a credible, forward-thinking consultancy while providing clear pathways for potential clients to initiate contact and explore collaboration opportunities."
+      tags={["HTML", "CSS", "Responsive", "JavaScript"]}
+      date="June 2025"
       />
 
       <ProjectAccordion 
@@ -51,6 +59,22 @@
       description="Font Explorer is a specialized web-based typography tool designed for designers, typographers, and front-end developers to preview, compare, and analyze fonts in a unified interface. Built with HTML, CSS and JavaScript , the application supports both online variable fonts from Google and Adobe libraries as well as locally installed system fonts, accessible simply by renaming the font tab to match the local font name. The tool features synchronized weight controls that automatically adjust across all open font tabs simultaneously, enabling efficient side-by-side comparison of different typefaces at matching specifications. Users can experiment with multiple typographic styles including condensed and italic modes, small caps variations, and a full spectrum of font weights, with real-time visual feedback. A comprehensive glyph viewer provides access to extensive character sets across multiple writing systems including Latin (lowercase and uppercase), Greek (lowercase and uppercase), Cyrillic (lowercase and uppercase), Hebrew, numbers, punctuation marks, and currency symbols, essential for multilingual design projects. The application exclusively features variable and open-source fonts licensed under SIL Open Font License (OFL) and Apache License Version 2.0, ensuring legal compliance for both personal and commercial use. As an open-source project hosted on GitHub and deployed at fontexplorer.net. The tool streamlines the font selection workflow by eliminating the need to switch between multiple applications or browser tabs, making it an efficient solution for typography-focused web development and design projects."
       tags={["HTML", "CSS", "JavaScript"]}
       date="August 2023"
+      />
+
+      <ProjectAccordion 
+      name="Ouroborus"
+      web="https://ouroborus.com.au/"
+      description="Ouroborus is a professional website for an Australian green-tech consultancy and incubator focused on building circular, resilient supply chains across energy, construction, and critical minerals. The site communicates Ouroborus's mission of advancing clean technologies and sustainable materials from discovery through to end-of-life responsibility, with sections dedicated to industries served, partner networks, and active projects. Built on WordPress, the site leverages a content managed architecture that allows the client to independently update project listings, partner information, and pages without developer involvement. The design emphasises environmental credibility and professional trust, with a clean layout suited to engaging investors, industry collaborators, and sustainability focused organisations across Australia."
+      tags={["WordPress", "CMS"]}
+      date="June 2023"
+      />
+
+      <ProjectAccordion 
+      name="Net Zero Stack"
+      web="https://www.netzerostack.com.au/"
+      description="Net Zero Stack is a sustainability-focused platform website for a Melbourne based innovation group dedicated to accelerating high impact net zero solutions through research, innovation, and commercialisation. The site acts as a central hub connecting projects, partners, and team members under a cohesive platform approach to climate technology. Built on Wix, the website features a bold visual identity with a distinctive green and dark colour scheme, custom iconography, and animated navigation elements that reinforce the brand's focus on clean technology leadership. The platform spans sections for featured projects, an about page, partner showcases, and a team directory, positioning Net Zero Stack as a connector between researchers, industry, and investors working toward Australia's decarbonisation goals."
+      tags={["Wix", "CMS"]}
+      date="June 2023"
       />
 
     </div>
