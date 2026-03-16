@@ -114,18 +114,18 @@ import { onMount } from 'svelte';
       <div class="flex justify-center mb-12">
         <div class="inline-flex rounded-xl bg-primary-100 p-2">
           <button 
-            class="px-8 py-3 rounded-lg font-bold transition-all duration-300 {expandedInstallation === 'easy' ? 'bg-white shadow-md text-primary-700' : 'text-text/60'}"
+            class="px-8 py-3 rounded-lg font-bold transition-all duration-300 {expandedInstallation === 'easy' ? 'bg-white shadow-md text-accent' : 'text-text/60'}"
             on:click={() => expandedInstallation = 'easy'}>
             Windows
           </button>
           <button 
             class="px-8 py-3 rounded-lg font-bold transition-all duration-300 {expandedInstallation === 'linux' ? 'bg-white shadow-md' : 'text-text/60'}"
-            style:color={expandedInstallation === 'linux' ? 'var(--sc-orange-600)' : 'inherit'}
+            style:color={expandedInstallation === 'linux' ? 'var(--sc-orange-600)' : ''}
             on:click={() => expandedInstallation = 'linux'}>
             Linux
           </button>
           <button 
-            class="px-8 py-3 rounded-lg font-bold transition-all duration-300 {expandedInstallation === 'manual' ? 'bg-white shadow-md text-primary-700' : 'text-text/60'}"
+            class="px-8 py-3 rounded-lg font-bold transition-all duration-300 {expandedInstallation === 'manual' ? 'bg-white shadow-md text-accent' : 'text-text/60'}"
             on:click={() => expandedInstallation = 'manual'}>
             Developer
           </button>

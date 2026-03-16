@@ -121,13 +121,13 @@
       <div class="flex justify-center mb-12">
         <div class="inline-flex rounded-xl bg-primary-100 p-2">
           <button 
-            class="px-8 py-3 rounded-lg font-bold transition-all duration-300 {expandedFeature === 'current' ? 'bg-white shadow-md text-primary-700' : 'text-text/60'}"
+            class="px-8 py-3 rounded-lg font-bold transition-all duration-300 {expandedFeature === 'current' ? 'bg-white shadow-md text-accent' : 'text-text/60'}"
             on:click={() => expandedFeature = 'current'}>
             Current Features
           </button>
           <button 
             class="px-8 py-3 rounded-lg font-bold transition-all duration-300 {expandedFeature === 'upcoming' ? 'bg-white shadow-md' : 'text-text/60'}"
-            style:color={expandedFeature === 'upcoming' ? 'var(--sc-orange-600)' : 'inherit'}
+            style:color={expandedFeature === 'upcoming' ? 'var(--sc-orange-600)' : ''}
             on:click={() => expandedFeature = 'upcoming'}>
             Upcoming Roadmap
           </button>
