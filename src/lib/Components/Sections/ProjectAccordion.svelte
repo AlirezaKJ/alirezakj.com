@@ -6,6 +6,7 @@
     tags=["Html", "CSS", "JavaScript"],
     git="",
     web="",
+    image="",
   } = $props();
 
   let isHovered = $state(false);
@@ -62,8 +63,21 @@
     onkeydown={handleToggleKeydown}
   >
     <!-- Description - Middle -->
-    <div class="flex-1 flex items-center overflow-hidden">
-      <p class="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">{description}</p>
+    <div class="flex-1 overflow-hidden py-2 sm:py-3">
+      <div class="grid items-start gap-4 md:gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(16rem,24rem)]">
+        <p class="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">{description}</p>
+
+        {#if image !== ""}
+          <div class="w-auto overflow-hidden rounded-lg bg-background-100 transition hover:scale-130">
+            <img
+              src={image}
+              alt={`${name} preview`}
+              class="h-full w-full object-contain"
+              loading="lazy"
+            />
+          </div>
+        {/if}
+      </div>
     </div>
 
     <!-- Tags and Date - Bottom -->
