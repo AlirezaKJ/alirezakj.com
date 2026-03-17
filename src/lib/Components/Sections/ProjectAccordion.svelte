@@ -68,7 +68,7 @@
         <p class="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">{description}</p>
 
         {#if image !== ""}
-          <div class="w-auto overflow-hidden rounded-lg bg-background-100 transition hover:scale-130">
+          <div class="w-auto overflow-hidden rounded-lg bg-background-100 transition">
             <img
               src={image}
               alt={`${name} preview`}
