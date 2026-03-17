@@ -1,5 +1,6 @@
 <script>
   import { lenisStore, scrollState } from '$lib/stores/scroll';
+  import { page } from '$app/stores';
 
   let expandBottom = false;
   let menuOpen = false;
@@ -21,6 +22,8 @@
   $: ontop = $scrollState.scroll < 1;
   $: onbottom = $scrollState.limit > 0 && $scrollState.scroll >= $scrollState.limit - 1;
   $: scrollingDirection = $scrollState.direction; // 1: down, 0: idle, -1: up
+
+  $: isbscpage = $page.url.pathname === '/bsc';
 
   $: console.log(scrollingDirection);
 
@@ -54,6 +57,16 @@
 </script>
 
 <nav class="flex justify-end items-center w-full h-36 px-4 sm:px-6 z-1">
+  {#if isbscpage}
+    <div
+      class={`fixed top-0 left-4 w-25 h-36 transition-all duration-500 ${ontop || expandBottom || menuOpen ? 'opacity-100' : 'opacity-0' } hidden md:flex justify-center items-center pointer-events-none z-0`}
+    style={onbottom && !menuOpen ? 'top: calc(100vh - 10.5rem);' : ''}
+    >
+      <div class="font-serif text-2xl text-accent flex justify-end items-end w-full h-12">
+        By
+      </div>
+    </div>
+  {/if}
   <div class={`transition-all duration-500 absolute md:fixed top-0 z-1 ${ontop || expandBottom || menuOpen  ? 'left-4 md:left-30' : 'left-4'} z-50`} style={onbottom && !menuOpen ? 'top: calc(100vh - 10.5rem);' : ''}> <!-- 6 (24) + 12 (48) + 12 (48) = 120 -->
     <a href="/" on:click={scrollToTop} class="font-serif flex justify-center items-center h-36">
       <div id="letter" class={`flex justify-center items-center transition-all duration-500 ${ontop || expandBottom || menuOpen ? 'w-full' : 'w-10 h-10 sm:w-12 sm:h-12'}`}>
