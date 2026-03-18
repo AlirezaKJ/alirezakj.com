@@ -67,7 +67,7 @@ import { onMount } from 'svelte';
     },
     {
       question: "Will My SoundCloud Account Get Banned?",
-      answer: "No. Since BetterSoundCloud's launch, no users have reported account bans from using the client. We operate within SoundCloud's terms of service by simply providing an alternative interface to access your account. However, always use the application responsibly."
+      answer: "No. Since BetterSoundCloud's launch, no users have reported account bans from using the client. We operate within SoundCloud's terms of service by simply providing an alternative interface to access your account."
     },
     {
       question: "How Do I Access Settings?",

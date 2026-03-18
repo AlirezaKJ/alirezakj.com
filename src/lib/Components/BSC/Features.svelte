@@ -88,20 +88,15 @@
   let activeFeature = currentFeatures[0];
   
   const upcomingFeatures = [
-    "macOS & Linux Packages",
+    "macOS Packages",
+    "Add Google Cast Support",
+    "Add Google Cast",
     "Proxy Integration",
     "Deep Linking",
-    "User Agent Customization",
     "Offline Listening",
     "Geographic Bypass",
     "Enhanced Shuffle",
     "Fullscreen Waveforms",
-    "Custom CSS Editor",
-    "Custom JavaScript Editor",
-    "Full Adblocker",
-    "SoundCloud Downloader",
-    "Lyrics Integration",
-    "Discord Rich Presence"
   ];
 </script>
 
