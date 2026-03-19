@@ -1,5 +1,5 @@
 <!-- Why Choose BetterSoundCloud -->
-  <section class="w-full py-24 bg-gradient-to-b from-background to-primary-50">
+  <section class="w-full py-24 via-background to-background bg-gradient-to-bl from-[var(--sc-orange-950)]">
     <div class="max-w-[var(--keyw)] mx-auto w-full px-6">
       <div class="text-center mb-16">
         <h2 class="text-5xl md:text-7xl font-serif font-bold mb-6">

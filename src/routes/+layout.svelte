@@ -38,11 +38,11 @@
 			});
 		});
 
-        lenis.on('scroll', ({ velocity }) => {
-            if (Math.abs(velocity) < 0.1) {
-                 scrollState.update(s => ({ ...s, direction: 0 }));
-            }
-        });
+    lenis.on('scroll', ({ velocity }) => {
+      if (Math.abs(velocity) < 0.1) {
+        scrollState.update(s => ({ ...s, direction: 0 }));
+      }
+    });
 
 
 

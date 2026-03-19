@@ -3,7 +3,7 @@
 </script>
 
 <!-- Hero Section -->
-  <section class="w-full py-12">
+  <section class="w-full py-12 via-background to-background bg-gradient-to-tl from-[var(--sc-orange-950)]">
     <div class="max-w-[var(--keyw)] mx-auto w-full px-6">
       <div class="flex flex-col items-center text-center space-y-8">
         <div class="inline-flex items-center space-x-3 bg-gradient-to-r from-[var(--sc-orange-100)] to-[var(--sc-orange-200)] px-6 py-3 rounded-full">
