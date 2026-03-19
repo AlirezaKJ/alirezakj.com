@@ -9,7 +9,7 @@
 </script>
 
 <!-- Technical Details & Community Stats -->
-<section class="via-background to-background w-full bg-gradient-to-tr from-[var(--sc-orange-950)] py-24">
+<section class="w-full py-24">
 	<div class="mx-auto w-full max-w-[var(--keyw)] px-6">
 		<div class="grid gap-12 md:grid-cols-2">
 			<!-- Technical Stack -->

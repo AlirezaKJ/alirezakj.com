@@ -4,10 +4,13 @@
 	import ComparisonTable from '$lib/Components/BSC/ComparisonTable.svelte';
 	import WhyChoose from '$lib/Components/BSC/WhyChoose.svelte';
 	import InstallationGuide from '$lib/Components/BSC/InstallationGuide.svelte';
+	import PatchNotesSection from '$lib/Components/BSC/PatchNotesSection.svelte';
 	import FAQSection from '$lib/Components/BSC/FAQSection.svelte';
 	import TechnicalStatsSection from '$lib/Components/BSC/TechnicalStatsSection.svelte';
 	import FinalCTASection from '$lib/Components/BSC/FinalCTASection.svelte';
 	import { onMount } from 'svelte';
+
+	export let data;
 
 	let starCount = 242; // fallback value
 	let forkCount = 14; // fallback value
@@ -81,7 +84,7 @@
 	<InstallationGuide />
 
 	<FAQSection />
-
+	
 	<TechnicalStatsSection
 		{starCount}
 		{forkCount}
@@ -91,6 +94,9 @@
 		{cssPercentage}
 		{htmlPercentage}
 	/>
+	
+	<PatchNotesSection patchnotes={data.patchnotes} />
 
 	<FinalCTASection />
 </div>
+
