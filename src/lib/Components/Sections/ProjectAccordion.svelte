@@ -28,7 +28,7 @@
 <div
   id="accordion"
   role="group"
-  class={`flex flex-col justify-between overflow-hidden px-4 sm:px-6 transition-all duration-600 bg-accent-100 mb-6 md:mb-8 shadow-md hover:shadow-lg border-2 border-transparent ${isHovered || isToggled ? "max-h-screen" : "max-h-20 sm:max-h-28"} ${isToggled ? "border-primary-300!" : ""}`}
+  class={`flex flex-col justify-between overflow-hidden px-4 sm:px-6 transition-all duration-600 bg-accent-100 mb-6 md:mb-8 shadow-md hover:shadow-lg border-2 border-transparent ${isToggled ? "border-primary-300!" : ""}`}
   onmouseenter={() => (isHovered = true)}
   onmouseleave={() => (isHovered = false)}
 >
@@ -56,39 +56,45 @@
   </div>
   
   <div
-    role="button"
-    tabindex="0"
-    class="flex-1 flex flex-col cursor-pointer"
-    onclick={toggleAccordion}
-    onkeydown={handleToggleKeydown}
+    class={`grid transition-all duration-600 ease-in-out ${isHovered || isToggled ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0 pointer-events-none"}`}
   >
-    <!-- Description - Middle -->
-    <div class="flex-1 overflow-hidden py-2 sm:py-3">
-      <div class="grid items-start gap-4 md:gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(16rem,24rem)]">
-        <p class="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">{description}</p>
+    <div class="overflow-hidden">
+      <div
+        role="button"
+        tabindex="0"
+        class="flex-1 flex flex-col cursor-pointer"
+        onclick={toggleAccordion}
+        onkeydown={handleToggleKeydown}
+      >
+        <!-- Description - Middle -->
+        <div class="flex-1 overflow-hidden py-2 sm:py-3">
+          <div class="grid items-start gap-4 md:gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(16rem,24rem)]">
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">{description}</p>
 
-        {#if image !== ""}
-          <div class="w-auto overflow-hidden rounded-lg bg-background-100 transition">
-            <img
-              src={image}
-              alt={`${name} preview`}
-              class="h-full w-full object-contain"
-              loading="lazy"
-            />
+            {#if image !== ""}
+              <div class="w-auto overflow-hidden rounded-lg bg-background-100 transition">
+                <img
+                  src={image}
+                  alt={`${name} preview`}
+                  class="h-full w-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+            {/if}
           </div>
-        {/if}
-      </div>
-    </div>
+        </div>
 
-    <!-- Tags and Date - Bottom -->
-    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center flex-shrink-0 my-4 sm:my-6 gap-3 sm:gap-4">
-      <div class="tags flex flex-wrap gap-2">
-        {#each tags as tag}
-          <span class="bg-accent-200 text-accent-800 px-2 py-1 sm:px-3 sm:py-2 rounded shadow-lg text-xs sm:text-sm">{tag}</span>
-        {/each}
-      </div>
-      <div class="text-xs sm:text-sm text-primary-300 flex-shrink-0">
-        {date}
+        <!-- Tags and Date - Bottom -->
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center flex-shrink-0 my-4 sm:my-6 gap-3 sm:gap-4">
+          <div class="tags flex flex-wrap gap-2">
+            {#each tags as tag}
+              <span class="bg-accent-200 text-accent-800 px-2 py-1 sm:px-3 sm:py-2 rounded shadow-lg text-xs sm:text-sm">{tag}</span>
+            {/each}
+          </div>
+          <div class="text-xs sm:text-sm text-primary-300 flex-shrink-0">
+            {date}
+          </div>
+        </div>
       </div>
     </div>
   </div>
