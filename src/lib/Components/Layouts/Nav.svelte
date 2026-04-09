@@ -51,6 +51,7 @@
     { name: 'Skills', href: '/#skills' },
     { name: 'Projects', href: '/#projects' },
     { name: 'Experiences', href: '/#experiences' },
+    { name: 'Testimonials', href: '/#testimonials' },
     { name: 'Education', href: '/#education' },
     { name: 'Contact Me', href: '/#contact' }
   ]
