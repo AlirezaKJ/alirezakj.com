@@ -3,26 +3,26 @@
 
 
 	const testimonials = [
+		// {
+		// 	image: '/assets/images/Portrait%20Cropped.jpg',
+		// 	name: 'Tawab Frahmand',
+		// 	role: 'CEO, Lenexa Medical',
+		// 	paragraph:
+		// 		'Working with Alireza was smooth from start to finish. He translated our ideas into a clean, modern website and kept communication clear through every phase of the project, from early planning to final launch. What stood out most was how quickly he understood both the visual direction and business goals, then turned feedback into practical improvements without delay. The final result looked polished, loaded quickly across devices, and gave our team a much stronger digital presence than we had before.'
+		// },
 		{
-			image: '/assets/images/Portrait%20Cropped.jpg',
-			name: 'Tawab Frahmand',
-			role: 'CEO, Lenexa Medical',
-			paragraph:
-				'Working with Alireza was smooth from start to finish. He translated our ideas into a clean, modern website and kept communication clear through every phase of the project, from early planning to final launch. What stood out most was how quickly he understood both the visual direction and business goals, then turned feedback into practical improvements without delay. The final result looked polished, loaded quickly across devices, and gave our team a much stronger digital presence than we had before.'
-		},
-		{
-			image: '/assets/images/blued%20portrait.jpg',
+			image: '/assets/images/pfp/ajit.jpg',
 			name: 'Ajit Ravindran',
-			role: 'Operations Lead, KAI-2',
+			role: 'Co-Founder and CEO at Lenexa Medical',
 			paragraph:
-				'He delivered exactly what we needed while improving several workflows we had not originally identified as priorities. Throughout the engagement, he was responsive, detail-oriented, and always willing to explain technical decisions in a way that made planning easier for our non-technical stakeholders. He consistently proposed practical solutions rather than quick fixes, which helped us reduce friction in day-to-day operations and maintain a stable, professional experience for our users after go-live.'
+				"We engaged Ali to completely rebuild the Lenexa Medical website, and the outcome exceeded our expectations. He handled everything: end-to-end architecture, CMS integration, animations, third-party feeds, and responsive design all in a clean scalable codebase using SvelteKit and TailwindCSS which our software team is familiar with. He communicated clearly throughout, respected our timelines, and was invested in getting the result right. I'd recommend him without hesitation for any serious web project."
 		},
 		{
-			image: '/assets/images/Portrait%20Cropped.jpg',
+			image: '/assets/images/pfp/reza.jpg',
 			name: 'Reza Hoseinnezhad',
-			role: 'Project Coordinator, Freelance Client',
+			role: 'Professor of Autonomous Systems at RMIT University',
 			paragraph:
-				'Our collaboration was efficient and genuinely stress-free from kickoff to delivery. Alireza was organized, realistic with timelines, and proactive about sharing progress so there were no surprises during development. The final product looked excellent, performed reliably on mobile and desktop, and included thoughtful refinements that improved usability beyond the original scope. He also provided clear handover guidance, which made post-launch updates much easier for our team to manage confidently.'
+				"I've had the privilege of watching Ali grow from a curious student into a skilled and self-driven developer. What sets him apart is his ability to bridge disciplines. He's not just technically sharp, but approaches problems with the kind of analytical thinking I expect from postgraduate researchers. He independently pursued certifications in both web development and cybersecurity, diving deep into areas like network security, cloud infrastructure, and penetration testing using his own initiative. Ali builds, experiments, and iterates. Any team that brings him on board is getting someone who will go beyond the job description."
 		}
 	];
 
@@ -151,7 +151,7 @@
 			aria-label="Testimonials"
 		>
 			<div
-				class="overflow-hidden rounded-[2rem] border border-primary-100 bg-primary-50 shadow-[0_12px_40px_rgba(14,37,49,0.08)]"
+				class="overflow-hidden"
 				on:pointerdown={handlePointerDown}
 				on:pointerup={handlePointerUp}
 				on:pointercancel={() => (touchActive = false)}
@@ -163,25 +163,25 @@
 				>
 					{#each testimonials as testimonial, index}
 						<article
-							class="w-full flex-shrink-0 px-5 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12"
+							class="w-full flex-shrink-0"
 							aria-hidden={activeIndex !== index}
 						>
-							<div class="mx-auto rounded-[1.75rem] backdrop-blur-sm">
+							<div class="mx-auto">
 								<div class="mb-6 flex items-center gap-4">
 									<img
 										src={testimonial.image}
 										alt={testimonial.name}
 										loading="lazy"
-										class="h-16 w-16 rounded-full border border-primary-200 object-cover shadow-sm sm:h-20 sm:w-20"
+										class="h-16 w-16 rounded-full border border-primary-200 object-cover shadow-sm sm:h-24 sm:w-24"
 									/>
 									<div>
-										<h3 class="text-xl font-bold text-primary-950 sm:text-2xl">{testimonial.name}</h3>
-										<p class="text-sm font-medium text-primary-600 sm:text-base">{testimonial.role}</p>
+										<h3 class="text-2xl font-bold text-primary-950 sm:text-3xl">{testimonial.name}</h3>
+										<p class="text-base font-medium text-primary-600 sm:text-lg">{testimonial.role}</p>
 									</div>
 								</div>
 
 								<p class="text-pretty text-base leading-7 text-primary-700 sm:text-lg sm:leading-8 md:text-xl">
-									“{testimonial.paragraph}”
+									“ {testimonial.paragraph} ”
 								</p>
 							</div>
 						</article>
@@ -192,7 +192,7 @@
 			<div class="mt-6 flex items-center justify-between gap-4 px-2 sm:px-4">
 				<button
 					type="button"
-					class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-primary-200 bg-primary-50 text-primary-900 shadow-sm transition-transform duration-200 hover:-translate-y-0.5 hover:bg-white focus:outline-none focus:ring-2 focus:ring-primary-400"
+					class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-primary-200 bg-primary-50 text-primary-900 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary-100 hover:text-white hover:border-primary-900 transition-all duration-300"
 					on:click={prev}
 					aria-label="Previous testimonial"
 				>
@@ -217,7 +217,7 @@
 
 				<button
 					type="button"
-					class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-primary-200 bg-primary-50 text-primary-900 shadow-sm transition-transform duration-200 hover:-translate-y-0.5 hover:bg-white focus:outline-none focus:ring-2 focus:ring-primary-400"
+					class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-primary-200 bg-primary-50 text-primary-900 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary-100 hover:text-white hover:border-primary-900 transition-all duration-300"
 					on:click={next}
 					aria-label="Next testimonial"
 				>

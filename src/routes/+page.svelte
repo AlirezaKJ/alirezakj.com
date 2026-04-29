@@ -17,7 +17,7 @@
 
 <ExperienceSection />
 
-<!-- <TestimonialsSection /> -->
+<TestimonialsSection />
 
 <EducationSection />
 
