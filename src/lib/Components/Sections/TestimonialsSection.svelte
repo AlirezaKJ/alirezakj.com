@@ -192,7 +192,7 @@
 			<div class="mt-6 flex items-center justify-between gap-4 px-2 sm:px-4">
 				<button
 					type="button"
-					class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-primary-200 bg-primary-50 text-primary-900 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary-100 hover:text-white hover:border-primary-900 transition-all duration-300"
+					class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-primary-200 bg-primary-50 text-primary-900 shadow-sm hover:-translate-y-0.5 hover:bg-primary-100 hover:text-white hover:border-primary-900 transition-all duration-300"
 					on:click={prev}
 					aria-label="Previous testimonial"
 				>
@@ -217,7 +217,7 @@
 
 				<button
 					type="button"
-					class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-primary-200 bg-primary-50 text-primary-900 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary-100 hover:text-white hover:border-primary-900 transition-all duration-300"
+					class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-primary-200 bg-primary-50 text-primary-900 shadow-sm hover:-translate-y-0.5 hover:bg-primary-100 hover:text-white hover:border-primary-900 transition-all duration-300"
 					on:click={next}
 					aria-label="Next testimonial"
 				>
