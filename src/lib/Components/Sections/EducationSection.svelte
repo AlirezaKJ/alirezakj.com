@@ -113,7 +113,7 @@
 					</div>
 				</a>
 
-				<a href="/assets/certs/swinburne-cert3.pdf" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-secondary-50 to-secondary-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+				<a href="/assets/certs/cert3-it.pdf" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-secondary-50 to-secondary-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
 					<!-- Certificate Badge/Image Area -->
 					<div class="flex h-40 items-center justify-center bg-gradient-to-b from-secondary-200 to-secondary-100 p-6">
 						<div class="flex h-24 w-24 items-center justify-center rounded-full bg-background shadow-md">
@@ -150,7 +150,7 @@
 					</div>
 				</a>
 
-				<a href="/assets/certs/parade-media.pdf" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-secondary-50 to-secondary-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+				<a href="/assets/certs/cert3-sam.pdf" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-secondary-50 to-secondary-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
 					<!-- Certificate Badge/Image Area -->
 					<div class="flex h-40 items-center justify-center bg-gradient-to-b from-secondary-200 to-secondary-100 p-6">
 						<div class="flex h-24 w-24 items-center justify-center rounded-full bg-background shadow-md">
@@ -169,7 +169,7 @@
 					</div>
 				</a>
 
-				<a href="/assets/certs/football-victoria.pdf" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-secondary-50 to-secondary-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+				<a href="/assets/certs/cert-ref.pdf" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-secondary-50 to-secondary-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
 					<!-- Certificate Badge/Image Area -->
 					<div class="flex h-40 items-center justify-center bg-gradient-to-b from-secondary-200 to-secondary-100 p-6">
 						<div class="flex h-24 w-24 items-center justify-center rounded-full bg-background shadow-md">
@@ -188,7 +188,7 @@
 					</div>
 				</a>
 
-				<a href="/assets/certs/iran-web-design.pdf" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-primary-50 to-primary-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+				<a href="/assets/certs/cert-webdesign.jpg" target="_blank" rel="noopener noreferrer" class="group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-primary-50 to-primary-100 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
 					<!-- Certificate Badge/Image Area -->
 					<div class="flex h-40 items-center justify-center bg-gradient-to-b from-primary-200 to-primary-100 p-6">
 						<div class="flex h-24 w-24 items-center justify-center rounded-full bg-background shadow-md">
