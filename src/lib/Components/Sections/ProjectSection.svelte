@@ -10,14 +10,23 @@
 
     <div class="accordions">
 
-      <ProjectAccordion 
-      name="BetterSoundCloud"  
+      <ProjectAccordion
+      name="BetterSoundCloud"
       git="https://github.com/AlirezaKJ/BetterSoundCloud"
       web="/bsc"
       image="/assets/images/BSC.png"
       description="BetterSoundCloud is a feature-rich desktop client for SoundCloud built with Electron.js that transforms the standard listening experience with extensive customization options and quality-of-life improvements. The application removes advertisements entirely, integrates Discord Rich Presence for social listening, and includes a built-in downloader for offline playback. Users can personalize their interface through a custom CSS and JavaScript editor, choosing from community-created themes with different color palettes. Additional features include synchronized lyrics powered by the LRCLIB API and enhanced playback controls. The project has gained significant traction with 242 stars on GitHub and has been verified as 100% clean by Softpedia, with no users reporting account bans since launch. Built primarily with CSS (56.2%), JavaScript (26.9%), and HTML (16.9%), the application is available for Windows with both portable and installer versions, plus a one-line installation script for Linux distributions."
       tags={["Electron.JS", "API", "Node.JS", "CSS", "JavaScript"]}
       date="January 2023"
+      />
+
+      <ProjectAccordion
+      name="Hybrid Modular"
+      web="https://hybridmodular.com.au/"
+      image="/assets/images/HM.png"
+      description="Hybrid Modular is a corporate website built for a Western Australian modular home builder specialising in energy-efficient, low-maintenance forever homes for downsizers, designed and built indoors before being craned onto site. Developed with SvelteKit (Svelte 5 runes), Tailwind CSS v4, GSAP, and Lenis, the site delivers a polished, motion-rich experience featuring split-text headline reveals, scroll-tied stat counters, a custom scroll-spy navigation with smooth anchor scrolling, and an editorial spec-sheet aesthetic with stamped section codes (§ 01 → § 06), model codes, mono labels, and hairline borders that make every surface read like an issued construction document. The single-page layout walks visitors through six clearly numbered sections: hero, about, a six-stage process timeline, a specification feature grid, team, featured projects and a contact form. all built on a custom ink/paper design system with seamless light and dark themes powered by a no-flash inline theme initialiser that reads localStorage and prefers-color-scheme before paint. The site is engineered for an older audience with ≥16px body type, 4.5:1 contrast in both themes, visible focus rings, semantic landmarks, and motion gated on prefers-reduced-motion. SEO is handled through per-page Open Graph metadata and rich JSON-LD structured data (Organization, LocalBusiness, and GeneralContractor schemas), and the application is deployed on Vercel with a fully responsive design across mobile, tablet, and desktop."
+      tags={["SvelteKit", "TailwindCSS", "GSAP", "Lenis", "SEO", "Vercel"]}
+      date="May 2026"
       />
 
       <ProjectAccordion 
