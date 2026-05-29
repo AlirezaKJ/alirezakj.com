@@ -4,6 +4,8 @@
 	import favicon from '$lib/assets/AKJ Black Rounded White Border.svg';
 	import Footer from '$lib/Components/Layouts/Footer.svelte';
 	import Nav from '$lib/Components/Layouts/Nav.svelte';
+	import SEO from '$lib/Components/SEO.svelte';
+	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import Lenis from 'lenis';
 	import 'lenis/dist/lenis.css';
@@ -56,9 +58,10 @@
 </script>
 
 
+<SEO {...($page.data.seo ?? {})} />
+
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<title> HOME | AKJ </title>
 </svelte:head>
 
 <Nav />

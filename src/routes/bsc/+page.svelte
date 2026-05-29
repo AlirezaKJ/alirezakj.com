@@ -68,10 +68,6 @@
 	});
 </script>
 
-<svelte:head>
-	<title>BetterSoundCloud - Enhanced SoundCloud Desktop Client</title>
-</svelte:head>
-
 <div class="bsc-page w-full">
 	<Header starCount={starCount.toLocaleString()} />
 

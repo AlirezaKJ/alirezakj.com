@@ -242,6 +242,37 @@ function normalizeGitHubReleases(releases) {
   });
 }
 
+const seo = {
+  title: 'BetterSoundCloud - Free Enhanced SoundCloud Desktop Client',
+  description:
+    'BetterSoundCloud is a free, open-source desktop client for SoundCloud with custom themes, plugins, a built-in ad-blocker, lyrics, and Discord Rich Presence. Download for Windows, macOS, and Linux.',
+  image: '/assets/images/BSC.png',
+  type: 'website',
+  jsonld: {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'BetterSoundCloud',
+    applicationCategory: 'MultimediaApplication',
+    operatingSystem: 'Windows, macOS, Linux',
+    url: 'https://alirezakj.com/bsc',
+    downloadUrl: 'https://github.com/AlirezaKJ/BetterSoundCloud/releases',
+    softwareVersion: '0.6.0',
+    license: 'https://opensource.org/licenses/MIT',
+    description:
+      'A free, open-source desktop client for SoundCloud with themes, plugins, an ad-blocker, lyrics, and Discord Rich Presence.',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD'
+    },
+    author: {
+      '@type': 'Person',
+      name: 'Alireza Karimi Jafari',
+      url: 'https://alirezakj.com'
+    }
+  }
+};
+
 export const load = async ({ fetch }) => {
   try {
     const response = await fetch('https://api.github.com/repos/AlirezaKJ/BetterSoundCloud/releases');
@@ -253,15 +284,17 @@ export const load = async ({ fetch }) => {
     const releases = await response.json();
 
     if (!Array.isArray(releases) || releases.length === 0) {
-      return { patchnotes: normalizeFallbackPatchnotes() };
+      return { seo, patchnotes: normalizeFallbackPatchnotes() };
     }
 
     return {
+      seo,
       patchnotes: normalizeGitHubReleases(releases)
     };
   } catch (error) {
     console.error('Failed to load patch notes:', error);
     return {
+      seo,
       patchnotes: normalizeFallbackPatchnotes()
     };
   }

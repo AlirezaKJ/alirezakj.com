@@ -14,8 +14,8 @@
       </div>
       <div class="flex justify-end md:justify-end animate-fade-in-up w-auto sm:w-auto">
         <img 
-          src="/assets/images/Portrait Cropped.jpg" 
-          alt="Alireza Portrait" 
+          src="/assets/images/Portrait Cropped.jpg"
+          alt="Alireza Karimi Jafari, web developer and photographer based in Melbourne"
           class="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-lg"
         />
       </div>

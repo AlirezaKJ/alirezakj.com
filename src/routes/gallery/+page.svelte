@@ -103,10 +103,6 @@
   });
 </script>
 
-<svelte:head>
-  <title>Gallery | AKJ</title>
-</svelte:head>
-
 <!-- <header class="flex flex-col justify-start relative overflow-hidden pb-16 md:pb-24">
   <div class="max-w-[var(--keyw)] mx-auto w-full px-4 md:px-0">
     <div class="flex flex-col gap-4 md:gap-6">
