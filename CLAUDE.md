@@ -6,6 +6,28 @@ Personal portfolio site for Alireza Karimi Jafari — web developer, UI/UX desig
 
 **Routes:** `/` (single-page portfolio: header → skills → projects → experience → testimonials → education → contact), `/gallery` (photography), `/projects`, `/bsc` (BetterSoundCloud product page, its own sub-brand palette), `/sitemap.xml`.
 
+## Motion & scroll
+
+**Lenis and GSAP own everything scroll-related on this site.** This is the convention, not an implementation detail — anything scroll-driven goes through them.
+
+How it's wired ([`src/routes/+layout.svelte`](src/routes/+layout.svelte)):
+
+- **Lenis owns page scroll.** A single instance is created on mount and published to `lenisStore` in [`src/lib/stores/scroll.js`](src/lib/stores/scroll.js).
+- **GSAP drives Lenis, not `requestAnimationFrame`.** `gsap.ticker.add((time) => lenis.raf(time * 1000))` with `gsap.ticker.lagSmoothing(0)`. One clock, no competing loops.
+- **ScrollTrigger updates from Lenis**, not from the native scroll event: `lenis.on('scroll', ScrollTrigger.update)`.
+- **Scroll state is a store, not a listener per component.** `scrollState` carries `{ scroll, limit, velocity, direction, progress }`. Read it (`$scrollState`) instead of attaching new scroll handlers — `Nav.svelte` already does.
+- **Programmatic scrolling goes through Lenis**: `$lenisStore?.scrollTo(target)`.
+
+Rules for any new scroll work:
+
+- **Don't** add `window.scrollTo`, `scrollIntoView`, or `scroll-behavior: smooth` — they fight Lenis and produce two competing animations.
+- **Don't** add a second smooth-scroll or scroll-animation library, and don't add a second `gsap.ticker` RAF loop.
+- **Do** register ScrollTrigger plugins once, in the layout, and build effects on top of the existing instance.
+- **Do** gate every scroll-driven effect on `prefers-reduced-motion: reduce` — under it, Lenis is skipped entirely and ScrollTrigger reveals become instant. Motion is central to this site, which makes this the highest-value accessibility item in the project.
+- **Do** keep reveals as enhancements to already-visible content. Never gate visibility on a scroll-triggered class; transitions don't fire on hidden tabs or in headless renderers, and the section ships blank.
+
+A dedicated **GSAP core skill is planned** for this project. Once it's installed, defer to it for GSAP API specifics and treat this section as the project-level wiring contract it must respect.
+
 ## Design Context
 
 Design work on this repo is governed by two documents. **Read them before changing any UI.**
