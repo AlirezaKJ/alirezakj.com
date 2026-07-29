@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-29T00:00:00.000Z",
+  "title": "Design System: alirezakj.com",
+  "extensions": {
+    "colorMeta": {
+      "console-black": {
+        "role": "neutral",
+        "displayName": "Console Black",
+        "canonical": "#09141b",
+        "note": "Page ground (dark theme, shipped). Light-theme counterpart is #e4eff6.",
+        "tonalRamp": ["#070f13", "#09141b", "#0e1e25", "#1b3c4b", "#295a70", "#367896", "#4495bb", "#daeaf1"]
+      },
+      "panel-surface": {
+        "role": "neutral",
+        "displayName": "Panel Surface",
+        "canonical": "#0e1e25",
+        "note": "First layer above the ground: cards, form panels, accordion rows at rest. Light counterpart #d9e9f2."
+      },
+      "panel-raised": {
+        "role": "neutral",
+        "displayName": "Panel Raised",
+        "canonical": "#1b3c4b",
+        "note": "Second layer: open or active containers. Light counterpart #b3d3e5."
+      },
+      "readout-ink": {
+        "role": "neutral",
+        "displayName": "Readout Ink",
+        "canonical": "#e7f1f4",
+        "note": "Body and heading text at full strength. Light counterpart #0b1518.",
+        "tonalRamp": ["#080f11", "#101e23", "#203b46", "#305969", "#40768c", "#5094af", "#96bfcf", "#eef4f7"]
+      },
+      "readout-ink-dim": {
+        "role": "neutral",
+        "displayName": "Readout Ink Dim",
+        "canonical": "#b9d4df",
+        "note": "Supporting text and chip labels. The floor for body-size copy; nothing dimmer is permitted."
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#0a2029",
+        "note": "Borders and dividers. Always 1px, except the 2px accordion state border."
+      },
+      "gauge-blue": {
+        "role": "primary",
+        "displayName": "Gauge Blue",
+        "canonical": "#8dcae2",
+        "note": "Structural blue. Inverts across themes: pale readout on dark (#8dcae2), deep ink on light (#1d5a72).",
+        "tonalRamp": ["#051014", "#0a2029", "#144052", "#1f607a", "#2981a3", "#33a1cc", "#85c6e0", "#d6ecf5"]
+      },
+      "gauge-blue-deep": {
+        "role": "primary",
+        "displayName": "Gauge Blue Deep",
+        "canonical": "#144052",
+        "note": "Pressed/filled state of Gauge Blue. Primary button rest fill."
+      },
+      "signal-cyan": {
+        "role": "tertiary",
+        "displayName": "Signal Cyan",
+        "canonical": "#3bb7ed",
+        "note": "The only voltage in the palette. Markers, focus borders, hover. Held under 10% of any viewport.",
+        "tonalRamp": ["#021117", "#04222f", "#09445d", "#0d668c", "#1188bb", "#16aae9", "#44bbee", "#a2ddf6"]
+      },
+      "signal-cyan-hot": {
+        "role": "tertiary",
+        "displayName": "Signal Cyan Hot",
+        "canonical": "#16aae9",
+        "note": "Saturated peak, for hover fills on large surfaces. Only dark text may sit on it (2.3:1 against Readout Ink)."
+      },
+      "deep-console": {
+        "role": "secondary",
+        "displayName": "Deep Console",
+        "canonical": "#156384",
+        "note": "Supporting fill for gradients and the footer wash. Least-used role in the system.",
+        "tonalRamp": ["#041016", "#07212c", "#0e4258", "#156384", "#1d83af", "#24a4db", "#7bc9ea", "#d3edf8"]
+      },
+      "soundcloud-orange": {
+        "role": "tertiary",
+        "displayName": "SoundCloud Orange",
+        "canonical": "#ff5500",
+        "note": "Scoped to .bsc-page only. Sole authorised exception to the One Hue Rule; must never leak past that root class.",
+        "tonalRamp": ["#2c0f00", "#993300", "#b33c00", "#cc4400", "#e64d00", "#ff5500", "#ff7733", "#ffccb3"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The single hero headline. One per page, never repeated. Currently maxes at 8rem; prefer 6rem on rework." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles — 'Skills & Expertise', 'Projects & Works', 'Let's Work Together'." },
+      "title": { "displayName": "Title", "purpose": "Project names in the accordion. The one place a title deliberately competes with a headline." },
+      "body": { "displayName": "Body", "purpose": "All prose. Measure capped at 65–75ch." },
+      "label": { "displayName": "Label", "purpose": "Form labels, chips, metadata. Sentence case — never uppercase, never tracked." }
+    },
+    "shadows": [
+      { "name": "response", "value": "0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3)", "purpose": "Applied on :hover and :focus-visible to interactive panels. Transitions in over 300ms. Never present at rest." },
+      { "name": "open", "value": "0 10px 15px -3px rgb(0 0 0 / 0.35), 0 4px 6px -4px rgb(0 0 0 / 0.35)", "purpose": "Deepest step, reserved for a container that is actually expanded — the open accordion row." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Default easing for all state transitions." },
+      { "name": "duration-state", "value": "300ms", "purpose": "Hover, focus, and color state changes." },
+      { "name": "duration-nav", "value": "500ms", "purpose": "Wordmark expansion and menu overlay slide." },
+      { "name": "duration-disclosure", "value": "600ms", "purpose": "Accordion grid-row disclosure (0fr → 1fr)." },
+      { "name": "smooth-scroll", "value": "Lenis, driven by the GSAP ticker with lagSmoothing(0)", "purpose": "Page-level scroll. Must be skipped entirely under prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" },
+      { "name": "keyw-switch", "value": "768px" }
+    ],
+    "container": {
+      "token": "--keyw",
+      "desktop": "calc(100% - 240px)",
+      "mobile": "100%",
+      "maxWidth": "80rem",
+      "note": "The single container spine. Every section resolves width through max-w-[var(--keyw)]."
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Form submit control. Gauge Blue Deep at rest, fills with Signal Cyan on hover — label flips to Console Black so the fill stays readable.",
+      "html": "<button class=\"ds-btn-primary\" type=\"submit\">Send Message</button>",
+      "css": ".ds-btn-primary { display: block; width: 100%; background: #144052; color: #e7f1f4; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 1rem; font-weight: 700; padding: 16px 24px; border: none; border-radius: 12px; cursor: pointer; transition: background 300ms cubic-bezier(0.4,0,0.2,1), color 300ms cubic-bezier(0.4,0,0.2,1), box-shadow 300ms cubic-bezier(0.4,0,0.2,1); } .ds-btn-primary:hover { background: #3bb7ed; color: #09141b; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3); } .ds-btn-primary:focus-visible { outline: 2px solid #3bb7ed; outline-offset: 2px; } .ds-btn-primary:active { background: #16aae9; color: #09141b; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Labelled field. Border shifts to Signal Cyan on focus with a translucent cyan ring — never the accent-200 step, which vanishes on dark.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-field-label\" for=\"ds-email\">Email</label><input class=\"ds-input\" id=\"ds-email\" type=\"email\" placeholder=\"john@example.com\" /></div>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 8px; } .ds-field-label { font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 0.875rem; font-weight: 600; color: #b9d4df; } .ds-input { width: 100%; background: #0e1e25; color: #e7f1f4; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 1rem; padding: 12px 16px; border: 1px solid #144052; border-radius: 12px; outline: none; transition: border-color 300ms cubic-bezier(0.4,0,0.2,1), box-shadow 300ms cubic-bezier(0.4,0,0.2,1); } .ds-input::placeholder { color: #b9d4df; opacity: 1; } .ds-input:focus-visible { border-color: #3bb7ed; box-shadow: 0 0 0 2px rgb(59 183 237 / 0.45); }"
+    },
+    {
+      "name": "Panel Card",
+      "kind": "card",
+      "refersTo": "card-panel",
+      "description": "The generously rounded containing surface. Flat at rest, separated tonally by a hairline border; shadow appears only on hover.",
+      "html": "<div class=\"ds-card\"><h3 class=\"ds-card-title\">Frontend</h3><ul class=\"ds-card-list\"><li><span class=\"ds-marker\"></span>React, SvelteKit, Svelte</li><li><span class=\"ds-marker\"></span>Tailwind CSS, SASS, Bootstrap</li><li><span class=\"ds-marker\"></span>Semantic HTML5 &amp; a11y</li></ul></div>",
+      "css": ".ds-card { background: #0e1e25; border: 1px solid #0a2029; border-radius: 24px; padding: 32px; transition: border-color 300ms cubic-bezier(0.4,0,0.2,1), box-shadow 300ms cubic-bezier(0.4,0,0.2,1); } .ds-card:hover { border-color: #144052; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3); } .ds-card-title { font-family: Grenze, Georgia, serif; font-size: 1.5rem; font-weight: 700; line-height: 1.15; color: #8dcae2; margin: 0 0 24px; } .ds-card-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 1rem; line-height: 1.625; color: #b9d4df; } .ds-card-list li { display: flex; align-items: flex-start; gap: 12px; } .ds-marker { flex: 0 0 auto; width: 6px; height: 6px; margin-top: 10px; border-radius: 9999px; background: #3bb7ed; }"
+    },
+    {
+      "name": "Tool Chip",
+      "kind": "chip",
+      "refersTo": "chip-tool",
+      "description": "Static label for tools and project tags. Not a filter — no selected state in the current system.",
+      "html": "<span class=\"ds-chip\">SvelteKit</span>",
+      "css": ".ds-chip { display: inline-block; background: #0a2029; color: #b9d4df; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 0.875rem; font-weight: 600; padding: 8px 16px; border: 1px solid #144052; border-radius: 8px; }"
+    },
+    {
+      "name": "Project Accordion Row",
+      "kind": "custom",
+      "refersTo": "accordion-row",
+      "description": "The signature component. Square among rounded panels, so it reads as the switch on the instrument panel. Hover peeks the content open; click locks it open and lights the 2px border. Disclosure animates grid-template-rows 0fr → 1fr, so no fixed height is needed.",
+      "html": "<div class=\"ds-accordion\"><div class=\"ds-accordion-head\"><h3 class=\"ds-accordion-name\">BetterSoundCloud</h3><span class=\"ds-accordion-glyph\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 -960 960 960\" width=\"24\" height=\"24\" aria-hidden=\"true\"><path d=\"M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-82q26-36 45-75.5t31-82.5H404q12 43 31 82.5t45 75.5Zm-104-16q-18-34-31.5-69.5T322-320H204q29 51 73 87.5t99 54.5Zm208 0q55-18 99-54.5t73-87.5H638q-9 37-22.5 72.5T584-178ZM170-400h136q-3-20-4.5-40t-1.5-40q0-20 1.5-40t4.5-40H170q-5 20-7.5 40t-2.5 40q0 20 2.5 40t7.5 40Zm216 0h188q3-20 4.5-40t1.5-40q0-20-1.5-40t-4.5-40H386q-3 20-4.5 40t-1.5 40q0 20 1.5 40t4.5 40Zm268 0h136q5-20 7.5-40t2.5-40q0-20-2.5-40t-7.5-40H654q3 20 4.5 40t1.5 40q0 20-1.5 40t-4.5 40Zm-16-240h118q-29-51-73-87.5T584-782q18 34 31.5 69.5T638-640Zm-234 0h152q-12-43-31-82.5T480-798q-26 36-45 75.5T404-640Zm-200 0h118q9-37 22.5-72.5T376-782q-55 18-99 54.5T204-640Z\"/></svg></span></div><div class=\"ds-accordion-body\"><div class=\"ds-accordion-clip\"><p class=\"ds-accordion-copy\">A feature-rich desktop client for SoundCloud built with Electron.js — ad-free playback, Discord Rich Presence, a custom CSS/JS theme editor, and synced lyrics.</p></div></div></div>",
+      "css": ".ds-accordion { background: #0e1e25; border: 2px solid transparent; border-radius: 0; padding: 0 24px; overflow: hidden; cursor: pointer; transition: border-color 300ms cubic-bezier(0.4,0,0.2,1), background 300ms cubic-bezier(0.4,0,0.2,1), box-shadow 300ms cubic-bezier(0.4,0,0.2,1); } .ds-accordion:hover, .ds-accordion:focus-within { border-color: #8dcae2; background: #1b3c4b; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.35), 0 4px 6px -4px rgb(0 0 0 / 0.35); } .ds-accordion-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 96px; } .ds-accordion-name { font-family: Grenze, Georgia, serif; font-size: 2.25rem; font-weight: 600; line-height: 1.15; color: #e7f1f4; margin: 0; } .ds-accordion-glyph { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; fill: #8dcae2; transition: transform 300ms cubic-bezier(0.4,0,0.2,1); } .ds-accordion:hover .ds-accordion-glyph { transform: scale(1.2); } .ds-accordion-body { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 600ms cubic-bezier(0.4,0,0.2,1), opacity 600ms cubic-bezier(0.4,0,0.2,1); } .ds-accordion:hover .ds-accordion-body, .ds-accordion:focus-within .ds-accordion-body { grid-template-rows: 1fr; opacity: 1; } .ds-accordion-clip { overflow: hidden; } .ds-accordion-copy { font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 1.125rem; line-height: 1.625; color: #b9d4df; margin: 0; padding: 0 0 24px; max-width: 70ch; } @media (prefers-reduced-motion: reduce) { .ds-accordion, .ds-accordion-body, .ds-accordion-glyph { transition: none; } .ds-accordion:hover .ds-accordion-body { grid-template-rows: 0fr; opacity: 0; } }"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Overlay menu link. Grenze, large, shifting from Readout Ink to Gauge Blue on hover. The overlay itself is a blurred Console Black wash sliding in from the left over 500ms.",
+      "html": "<nav class=\"ds-nav\"><h2 class=\"ds-nav-heading\">Portfolio</h2><a class=\"ds-nav-link\" href=\"#projects\">Projects</a><a class=\"ds-nav-link\" href=\"#experiences\">Experiences</a><a class=\"ds-nav-link\" href=\"#contact\">Contact Me</a></nav>",
+      "css": ".ds-nav { display: flex; flex-direction: column; gap: 24px; background: rgb(9 20 27 / 0.9); backdrop-filter: blur(24px); padding: 32px; } .ds-nav-heading { font-family: Grenze, Georgia, serif; font-size: 2.25rem; font-weight: 700; color: #8dcae2; margin: 0 0 8px; } .ds-nav-link { font-family: Grenze, Georgia, serif; font-size: 2.25rem; font-weight: 700; color: #e7f1f4; text-decoration: none; transition: color 300ms cubic-bezier(0.4,0,0.2,1); } .ds-nav-link:hover { color: #3bb7ed; } .ds-nav-link:focus-visible { outline: 2px solid #3bb7ed; outline-offset: 4px; }"
+    },
+    {
+      "name": "Icon Well",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Circular container for contact and social glyphs. The only circular surface in the system besides bullet markers.",
+      "html": "<a class=\"ds-icon-well\" href=\"https://github.com/AlirezaKJ\" aria-label=\"GitHub Profile\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path d=\"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z\"/></svg></a>",
+      "css": ".ds-icon-well { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 1px solid #144052; border-radius: 9999px; fill: #8dcae2; transition: background 300ms cubic-bezier(0.4,0,0.2,1), fill 300ms cubic-bezier(0.4,0,0.2,1), border-color 300ms cubic-bezier(0.4,0,0.2,1); } .ds-icon-well:hover { background: #3bb7ed; fill: #09141b; border-color: #3bb7ed; } .ds-icon-well:focus-visible { outline: 2px solid #3bb7ed; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Instrument Panel",
+    "overview": "This is a calibrated control surface, not a brochure. Every element sits where a gauge would sit: exact, legible at a glance, and honest about its state. Nothing is approximately placed. The dark ground is not a mood choice — it is the unlit face of an instrument, and the blues on it are readouts. Where a conventional portfolio decorates, this system indicates: a border thickens because something is open, a shadow appears because a surface is being touched, a value changes because you scrolled. Precision is the credential, expressed without ever writing the word.\n\nThe restlessness lives in response, not in ambient animation. Surfaces are still until handled, then they move decisively and stop. Motion is a readout of interaction, never a garnish applied on a second pass. The playfulness is in what rewards a curious hand — a control that does more than it advertises, a panel that opens further than expected.\n\nThe palette is a committed blue system, and it carries a live risk the system must actively resist: blue-on-white with soft shadows is exactly where 'safe corporate agency site' lives, and that is a named anti-reference in PRODUCT.md. The defence is depth and voltage. Grounds go darker than comfortable; the accent runs hotter than a corporate palette would allow; contrast between the two is wide. A blue that is merely pleasant has failed this system.",
+    "keyCharacteristics": [
+      "Dark-first, near-black blue ground (#09141b) with a light counterpart ramp that is real, not decorative",
+      "One committed hue family across the entire surface — no second accent hue, no warm neutral anywhere",
+      "Flat at rest; depth exists only as a response to interaction",
+      "Display serif (Grenze) against a workhorse sans (IBM Plex Sans) — high contrast, two jobs, no third font",
+      "Square, hard-edged signature component (the project accordion) among otherwise generously rounded panels",
+      "Motion is short, eased, and decisive: 300ms for states, 600ms for disclosure"
+    ],
+    "rules": [
+      { "name": "The Voltage Rule", "body": "Signal Cyan appears on ≤10% of any viewport. It marks state, interaction, and one thing per fold that matters. A section where cyan reads as 'the section color' has spent the whole budget; pull it back to markers and states.", "section": "colors" },
+      { "name": "The Anti-Agency Rule", "body": "Blue must earn its place by depth and voltage, never by pleasantness. If a proposed surface would look at home on a mid-market consultancy site — mid-tone blue, white ground, soft ambient shadow, generous rounding — it has landed on the anti-reference and must be pushed: darker ground, hotter accent, wider contrast, harder edges.", "section": "colors" },
+      { "name": "The One Hue Rule", "body": "No second hue enters this system. Warmth, alarm, and success states are expressed through lightness and chroma within the blue family, or through type weight and iconography. The only exception is the scoped .bsc-page sub-brand.", "section": "colors" },
+      { "name": "The Two Voices Rule", "body": "Grenze for anything that names a thing; Plex Sans for anything that explains one. A card heading in Plex Sans while another card heading is in Grenze is the system contradicting itself.", "section": "typography" },
+      { "name": "The Shouting Ceiling Rule", "body": "The display max is currently 8rem (text-9xl at ≥1280px), above the 6rem ceiling that keeps a heading designing rather than shouting. Do not raise it further; prefer 6rem when reworking the hero, and never combine the current max with a long single word.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "No shadow-* utility appears on a resting element. If a card has a shadow before you touch it, remove it and separate it tonally instead.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do route every new section's width through max-w-[var(--keyw)]; it is the single container spine.",
+      "Do separate resting surfaces tonally (Console Black → Panel Surface → Panel Raised) with a 1px Hairline, and save shadow for hover, focus, and open states.",
+      "Do keep Signal Cyan under 10% of any viewport, on state and markers only.",
+      "Do set anything that names a thing in Grenze, and anything that explains one in IBM Plex Sans.",
+      "Do break every grid — span a cell, offset a column, change a ratio. Even grids are the shape this project rejects.",
+      "Do pair every GSAP, Lenis, and CSS transition with a prefers-reduced-motion: reduce alternative, and skip Lenis entirely under it.",
+      "Do verify contrast against the actual dark-theme value before shipping a color pairing; the blue ramp makes 2–3:1 combinations easy to reach by accident."
+    ],
+    "donts": [
+      "Don't put a shadow-* utility on a resting element.",
+      "Don't introduce a second hue. No red error states, no green success states, no warm neutral anywhere. The .bsc-page orange is scoped and is the only exception.",
+      "Don't let Signal Cyan Hot (#16aae9) sit under light text — it measures 2.3:1 against Readout Ink. Dark text on cyan, or cyan text on dark. Never light on cyan.",
+      "Don't use accent-200 for focus rings on the dark theme; it is #09445d and disappears into the panel.",
+      "Don't write outline-none without supplying a :focus-visible replacement in the same rule.",
+      "Don't round the project accordion, and don't give a second component a square 0px radius. Its edge is a singular signal.",
+      "Don't add uppercase tracked labels above section headings, numbered 01 / 02 / 03 section markers, or gradient text. All three are named anti-references in PRODUCT.md.",
+      "Don't raise the display headline above its current 8rem max, and don't ship a hero without checking it at 768px and 1024px for overflow.",
+      "Don't introduce Playfair Display as a third family without removing Grenze or IBM Plex Sans."
+    ]
+  }
+}
