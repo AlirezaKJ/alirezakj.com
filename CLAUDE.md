@@ -12,21 +12,22 @@ Personal portfolio site for Alireza Karimi Jafari — web developer, UI/UX desig
 
 How it's wired ([`src/routes/+layout.svelte`](src/routes/+layout.svelte)):
 
-- **Lenis owns page scroll.** A single instance is created on mount and published to `lenisStore` in [`src/lib/stores/scroll.js`](src/lib/stores/scroll.js).
-- **GSAP drives Lenis, not `requestAnimationFrame`.** `gsap.ticker.add((time) => lenis.raf(time * 1000))` with `gsap.ticker.lagSmoothing(0)`. One clock, no competing loops.
-- **ScrollTrigger updates from Lenis**, not from the native scroll event: `lenis.on('scroll', ScrollTrigger.update)`.
+- **Lenis owns page scroll.** A single instance is created on mount with `{ autoRaf: false }` and published to `lenisStore` in [`src/lib/stores/scroll.js`](src/lib/stores/scroll.js). It is destroyed (and its ticker callback removed) in the `onMount` cleanup.
+- **GSAP drives Lenis, not `requestAnimationFrame`.** `gsap.ticker.add((time) => lenis.raf(time * 1000))` with `gsap.ticker.lagSmoothing(0)`. One clock, no competing loops — hence `autoRaf: false`, which would otherwise start a second one.
+- **ScrollTrigger updates from Lenis**, not from the native scroll event: `lenis.on('scroll', () => ScrollTrigger.update())`. It also refreshes after `document.fonts.ready` and after every `afterNavigate`.
 - **Scroll state is a store, not a listener per component.** `scrollState` carries `{ scroll, limit, velocity, direction, progress }`. Read it (`$scrollState`) instead of attaching new scroll handlers — `Nav.svelte` already does.
-- **Programmatic scrolling goes through Lenis**: `$lenisStore?.scrollTo(target)`.
+- **Reduced motion has no Lenis at all**, so nothing may assume `$lenisStore` is non-null. Use the helpers in the same module — `scrollTo(target, options)` for programmatic scrolling, `lockScroll()` / `unlockScroll()` for modals — which fall back to native behaviour when Lenis is absent. `reducedMotion` (store) and `prefersReducedMotion()` (one-shot) are the single source of truth for motion gates.
 
 Rules for any new scroll work:
 
-- **Don't** add `window.scrollTo`, `scrollIntoView`, or `scroll-behavior: smooth` — they fight Lenis and produce two competing animations.
+- **Don't** add `window.scrollTo`, `scrollIntoView`, or `scroll-behavior: smooth` — they fight Lenis and produce two competing animations. `scrollTo()` from the scroll store is the one sanctioned exception, and only on the no-Lenis path.
+- **Don't** hand-copy Lenis' stylesheet into `main.css`; `lenis/dist/lenis.css` is imported in the layout and stays in step with the package.
 - **Don't** add a second smooth-scroll or scroll-animation library, and don't add a second `gsap.ticker` RAF loop.
 - **Do** register ScrollTrigger plugins once, in the layout, and build effects on top of the existing instance.
 - **Do** gate every scroll-driven effect on `prefers-reduced-motion: reduce` — under it, Lenis is skipped entirely and ScrollTrigger reveals become instant. Motion is central to this site, which makes this the highest-value accessibility item in the project.
 - **Do** keep reveals as enhancements to already-visible content. Never gate visibility on a scroll-triggered class; transitions don't fire on hidden tabs or in headless renderers, and the section ships blank.
 
-A dedicated **GSAP core skill is planned** for this project. Once it's installed, defer to it for GSAP API specifics and treat this section as the project-level wiring contract it must respect.
+The **GSAP skills are installed** under [`.claude/skills/`](.claude/skills) (`gsap-core`, `gsap-scrolltrigger`, `gsap-timeline`, `gsap-frameworks`, `gsap-plugins`, `gsap-performance`, `gsap-utils`). Defer to them for GSAP API specifics; this section is the project-level wiring contract they must respect. In components, follow `gsap-frameworks`: create inside `onMount` in a `gsap.context(fn, container)` and `return () => ctx.revert()`.
 
 ## Design Context
 

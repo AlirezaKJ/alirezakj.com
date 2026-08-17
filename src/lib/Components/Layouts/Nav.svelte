@@ -1,5 +1,5 @@
 <script>
-  import { lenisStore, scrollState } from '$lib/stores/scroll';
+  import { scrollTo, scrollState } from '$lib/stores/scroll';
   import { page } from '$app/stores';
 
   let expandBottom = false;
@@ -8,7 +8,7 @@
 
   function scrollToTop(e) {
     e.preventDefault();
-    $lenisStore?.scrollTo(0);
+    scrollTo(0);
   }
 
   function toggleMenu() {
@@ -24,8 +24,6 @@
   $: scrollingDirection = $scrollState.direction; // 1: down, 0: idle, -1: up
 
   $: isbscpage = $page.url.pathname === '/bsc';
-
-  $: console.log(scrollingDirection);
 
   // Delay the expansion when reaching bottom
   $: if (onbottom) {

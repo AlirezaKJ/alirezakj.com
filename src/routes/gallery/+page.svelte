@@ -1,6 +1,6 @@
 <script>
   import { onDestroy, onMount } from 'svelte';
-  import { lenisStore } from '$lib/stores/scroll';
+  import { lockScroll, unlockScroll } from '$lib/stores/scroll';
 
   const collections = [
     {
@@ -53,12 +53,12 @@
     activeCollection = ci;
     activeImage = ii;
     lightboxOpen = true;
-    $lenisStore?.stop();
+    lockScroll();
   }
 
   function closeLightbox() {
     lightboxOpen = false;
-    $lenisStore?.start();
+    unlockScroll();
   }
 
   function next() {
@@ -99,7 +99,7 @@
     if (typeof window !== 'undefined') {
       window.removeEventListener('keydown', handleKeydown);
     }
-    $lenisStore?.start();
+    unlockScroll();
   });
 </script>
 
