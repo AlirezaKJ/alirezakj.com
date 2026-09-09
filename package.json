@@ -7,8 +7,8 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"preview:cf": "npm run build && wrangler dev",
-		"deploy": "npm run build && wrangler deploy",
+		"preview:cf": "wrangler dev",
+		"deploy": "wrangler deploy",
 		"prepare": "svelte-kit sync || echo ''",
 		"format": "prettier --write .",
 		"lint": "prettier --check ."
