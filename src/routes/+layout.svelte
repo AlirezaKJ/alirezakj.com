@@ -1,5 +1,4 @@
 <script>
-	import { injectAnalytics } from '@vercel/analytics/sveltekit'
 	import '$lib/main.css';
 	import favicon from '$lib/assets/AKJ Black Rounded White Border.svg';
 	import Footer from '$lib/Components/Layouts/Footer.svelte';
@@ -13,8 +12,6 @@
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import { scrollState, lenisStore, prefersReducedMotion } from '$lib/stores/scroll';
-
-	injectAnalytics();
 
 	let lenis = null;
 
