@@ -2,6 +2,7 @@
 	import './layout.css';
 	import 'lenis/dist/lenis.css';
 	import favicon from '$lib/assets/favicon.svg';
+	import Nav from '$lib/components/chassis/Nav.svelte';
 	import Lenis from 'lenis';
 	import { afterNavigate } from '$app/navigation';
 	import { gsap, ScrollTrigger } from '$lib/motion/gsap.js';
@@ -63,4 +64,15 @@
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
-{@render children()}
+<a
+	href="#main"
+	class="bg-primary text-on-primary sr-only rounded-sm px-4 py-2 text-xs font-medium tracking-[0.12em] uppercase focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60]"
+>
+	Skip to content
+</a>
+
+<Nav />
+
+<main id="main">
+	{@render children()}
+</main>

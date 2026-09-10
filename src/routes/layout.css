@@ -66,6 +66,8 @@
 	--sg-link: #375e50;
 	--sg-divider: #cbd5d2;
 	--sg-control: #808e91;
+	/* Sea green cannot signal failure; this is outside the brand palette by necessity. */
+	--sg-danger: #b4453a;
 }
 
 /* Dark values, applied by the system preference and by the explicit override. */
@@ -84,6 +86,7 @@
 		--sg-link: #b5decc;
 		--sg-divider: #3b4a4d;
 		--sg-control: #758283;
+		--sg-danger: #e58b80;
 	}
 }
 
@@ -101,6 +104,29 @@
 	--sg-link: #b5decc;
 	--sg-divider: #3b4a4d;
 	--sg-control: #758283;
+	--sg-danger: #e58b80;
+}
+
+/* ------------------------------------------------------------------ *
+ * Chassis — the instrument housing.
+ * A reserved lane down each side so the fixed letter (left) and the menu
+ * control (right) always have their own space and never collide with
+ * content. This lane IS the bezel; content lives in the band between.
+ * ------------------------------------------------------------------ */
+
+:root {
+	--chassis-lane: 7.5rem; /* 120px — wide enough for the expanded nameplate */
+	--nav-h: 9rem; /* 144px — the nav band's fixed height */
+	--keyw: calc(100% - (var(--chassis-lane) * 2));
+}
+
+@media (width <= 768px) {
+	:root {
+		/* The lane collapses; the letter and menu overlay content instead. */
+		--chassis-lane: 1rem;
+		--nav-h: 6rem;
+		--keyw: 100%;
+	}
 }
 
 @theme inline {
@@ -120,6 +146,10 @@
 	--color-link: var(--sg-link);
 	--color-divider: var(--sg-divider);
 	--color-control: var(--sg-control);
+	--color-danger: var(--sg-danger);
+
+	/* The content band, capped so the instrument stops widening. */
+	--container-keyw: min(var(--keyw), 90rem);
 }
 
 @theme {
@@ -127,6 +157,21 @@
 	--color-turquoise-green: #b5decc;
 	--color-cobalt-green: #96d1aa;
 	--color-slate: #34454c;
+
+	/* Machined edge set. Nothing rounds outside this. */
+	--radius-sm: 2px;
+	--radius-md: 6px;
+	--radius-lg: 12px;
+	--radius-bezel: 20px;
+
+	/* Caused depth only — never applied at rest on a flush element. */
+	--shadow-lift-hover: 0 2px 8px -2px rgb(39 59 66 / 0.1);
+	--shadow-lift-float: 0 8px 24px -6px rgb(39 59 66 / 0.14);
+	--shadow-lift-modal: 0 24px 64px -12px rgb(39 59 66 / 0.22);
+
+	/* A needle arrives with slight overshoot and damps. */
+	--ease-settle: cubic-bezier(0.22, 1, 0.36, 1);
+	--ease-sweep: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 /* `dark:` follows the system preference unless `data-theme` overrides it. */
@@ -142,10 +187,16 @@
 }
 
 @layer base {
+	html {
+		/* Lenis owns scroll; native smooth behaviour would fight it. */
+		scroll-behavior: auto;
+	}
+
 	body {
 		background-color: var(--color-background);
 		color: var(--color-foreground);
 		font-family: var(--font-sans);
+		font-feature-settings: 'lnum';
 		-webkit-font-smoothing: antialiased;
 		text-rendering: optimizeLegibility;
 	}
@@ -163,8 +214,58 @@
 		color: var(--color-link);
 	}
 
+	/* ---------------------------------------------------------------- *
+	 * Browser surfaces. The parts not drawn here still carry the design;
+	 * left alone they ship Chrome's defaults, which belong to no system.
+	 * ---------------------------------------------------------------- */
+
 	::selection {
 		background-color: var(--color-secondary);
 		color: var(--color-on-secondary);
+	}
+
+	:root {
+		/* Firefox and the standard property. */
+		scrollbar-color: var(--color-control) transparent;
+		scrollbar-width: thin;
+		accent-color: var(--color-primary);
+	}
+
+	::-webkit-scrollbar {
+		width: 10px;
+		height: 10px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: var(--color-control);
+		border: 3px solid var(--color-background);
+		/* The dial step — a round-ended bar is one of the things allowed to be round. */
+		border-radius: 9999px;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background-color: var(--color-primary);
+	}
+
+	input,
+	textarea,
+	select {
+		caret-color: var(--color-primary);
+	}
+
+	/* A machined double-line, never a glow. Never removed. */
+	:focus-visible {
+		outline: 2px solid var(--color-primary);
+		outline-offset: 2px;
+	}
+
+	/* Underlines sit clear of the descenders rather than through them. */
+	a:where(:not([class])) {
+		text-underline-offset: 0.2em;
+		text-decoration-thickness: 1px;
 	}
 }
