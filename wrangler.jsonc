@@ -4,6 +4,10 @@
 	"main": ".svelte-kit/cloudflare/_worker.js",
 	"compatibility_date": "2026-09-08",
 	"compatibility_flags": ["nodejs_compat"],
+	"build": {
+		// `.svelte-kit/cloudflare` is gitignored, so wrangler must build before uploading.
+		"command": "npm run build"
+	},
 	"assets": {
 		"binding": "ASSETS",
 		"directory": ".svelte-kit/cloudflare"
