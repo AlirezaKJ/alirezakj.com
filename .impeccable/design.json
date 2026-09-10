@@ -1,0 +1,497 @@
+{
+	"schemaVersion": 2,
+	"generatedAt": "2026-09-10T00:00:00.000Z",
+	"title": "Design System: AKJ Studio",
+	"extensions": {
+		"colorMeta": {
+			"primary": {
+				"role": "primary",
+				"displayName": "Deep Kelp",
+				"canonical": "#375E50",
+				"darkCounterpart": "#B5DECC",
+				"note": "Verified 7.29:1 against #FFFFFF. The only fill permitted on a primary action.",
+				"tonalRamp": [
+					"oklch(0.15 0.030 163)",
+					"oklch(0.22 0.038 163)",
+					"oklch(0.30 0.044 163)",
+					"oklch(0.40 0.046 163)",
+					"oklch(0.52 0.048 163)",
+					"oklch(0.66 0.046 163)",
+					"oklch(0.80 0.038 163)",
+					"oklch(0.93 0.020 163)"
+				]
+			},
+			"secondary": {
+				"role": "secondary",
+				"displayName": "Cobalt Green",
+				"canonical": "#96D1AA",
+				"darkCounterpart": "#7FAF91",
+				"note": "Supporting readout only. Never a primary action, never under body text.",
+				"tonalRamp": [
+					"oklch(0.18 0.040 150)",
+					"oklch(0.28 0.056 150)",
+					"oklch(0.40 0.070 150)",
+					"oklch(0.52 0.080 150)",
+					"oklch(0.64 0.082 150)",
+					"oklch(0.80 0.075 150)",
+					"oklch(0.89 0.048 150)",
+					"oklch(0.96 0.020 150)"
+				]
+			},
+			"turquoise-green": {
+				"role": "tertiary",
+				"displayName": "Turquoise Green",
+				"canonical": "#B5DECC",
+				"darkCounterpart": "#B5DECC",
+				"note": "Fixed brand reference, identical in both schemes. Emitted light only — trace glow, lens edge, Three.js emissive. Never a text ground.",
+				"tonalRamp": [
+					"oklch(0.20 0.028 160)",
+					"oklch(0.32 0.038 160)",
+					"oklch(0.45 0.044 160)",
+					"oklch(0.58 0.046 160)",
+					"oklch(0.71 0.046 160)",
+					"oklch(0.865 0.045 160)",
+					"oklch(0.93 0.028 160)",
+					"oklch(0.975 0.012 160)"
+				]
+			},
+			"slate": {
+				"role": "neutral",
+				"displayName": "Slate",
+				"canonical": "#34454C",
+				"darkCounterpart": "#34454C",
+				"note": "Fixed brand reference. The instrument housing — structural, silent, identical in both schemes.",
+				"tonalRamp": [
+					"oklch(0.15 0.014 220)",
+					"oklch(0.23 0.018 220)",
+					"oklch(0.32 0.020 220)",
+					"oklch(0.43 0.020 220)",
+					"oklch(0.55 0.018 220)",
+					"oklch(0.68 0.016 220)",
+					"oklch(0.82 0.012 220)",
+					"oklch(0.94 0.006 220)"
+				]
+			},
+			"background": {
+				"role": "neutral",
+				"displayName": "Sea Foam Ground",
+				"canonical": "#EFF7F2",
+				"darkCounterpart": "#14242A",
+				"note": "The page ground. Not white, not black — pale sea glass in light, slate housing in dark.",
+				"tonalRamp": [
+					"oklch(0.16 0.014 195)",
+					"oklch(0.26 0.016 190)",
+					"oklch(0.38 0.016 180)",
+					"oklch(0.52 0.014 172)",
+					"oklch(0.66 0.012 166)",
+					"oklch(0.80 0.012 162)",
+					"oklch(0.91 0.012 160)",
+					"oklch(0.965 0.012 160)"
+				]
+			},
+			"surface": {
+				"role": "neutral",
+				"displayName": "Instrument Face",
+				"canonical": "#FFFFFF",
+				"darkCounterpart": "#21353B",
+				"note": "One tonal step above ground. This step is the primary depth mechanism — most panels need no shadow at all.",
+				"tonalRamp": [
+					"oklch(0.18 0.016 200)",
+					"oklch(0.28 0.018 198)",
+					"oklch(0.40 0.016 190)",
+					"oklch(0.54 0.014 180)",
+					"oklch(0.68 0.010 172)",
+					"oklch(0.82 0.006 165)",
+					"oklch(0.93 0.003 160)",
+					"oklch(1.00 0.000 0)"
+				]
+			},
+			"foreground": {
+				"role": "neutral",
+				"displayName": "Slate Ink",
+				"canonical": "#273B42",
+				"darkCounterpart": "#ECF5EF",
+				"note": "Body text and headings. Cold near-black, never pure black.",
+				"tonalRamp": [
+					"oklch(0.15 0.016 225)",
+					"oklch(0.22 0.020 225)",
+					"oklch(0.30 0.022 225)",
+					"oklch(0.42 0.020 222)",
+					"oklch(0.56 0.018 218)",
+					"oklch(0.70 0.014 212)",
+					"oklch(0.84 0.010 205)",
+					"oklch(0.95 0.005 195)"
+				]
+			},
+			"muted": {
+				"role": "neutral",
+				"displayName": "Etched Grey",
+				"canonical": "#617276",
+				"darkCounterpart": "#A3AEAC",
+				"note": "Verified 4.53:1 against #EFF7F2 — passing with no margin. Barred below 16px and from information the visitor needs.",
+				"tonalRamp": [
+					"oklch(0.16 0.010 215)",
+					"oklch(0.26 0.012 215)",
+					"oklch(0.37 0.013 215)",
+					"oklch(0.51 0.012 215)",
+					"oklch(0.63 0.011 213)",
+					"oklch(0.75 0.009 210)",
+					"oklch(0.87 0.006 205)",
+					"oklch(0.96 0.003 200)"
+				]
+			},
+			"divider": {
+				"role": "neutral",
+				"displayName": "Calibration Line",
+				"canonical": "#CBD5D2",
+				"darkCounterpart": "#3B4A4D",
+				"note": "Hairline rules and scale markings. Divides; never outlines a decorative box.",
+				"tonalRamp": [
+					"oklch(0.18 0.008 190)",
+					"oklch(0.29 0.010 180)",
+					"oklch(0.41 0.010 175)",
+					"oklch(0.54 0.010 170)",
+					"oklch(0.67 0.010 168)",
+					"oklch(0.79 0.010 166)",
+					"oklch(0.85 0.010 165)",
+					"oklch(0.95 0.006 162)"
+				]
+			},
+			"control": {
+				"role": "neutral",
+				"displayName": "Control Edge",
+				"canonical": "#808E91",
+				"darkCounterpart": "#758283",
+				"note": "Verified 3.11:1 against #EFF7F2, clearing the 3:1 non-text minimum for interactive borders.",
+				"tonalRamp": [
+					"oklch(0.17 0.006 210)",
+					"oklch(0.27 0.008 210)",
+					"oklch(0.39 0.009 210)",
+					"oklch(0.51 0.009 210)",
+					"oklch(0.62 0.008 210)",
+					"oklch(0.74 0.007 208)",
+					"oklch(0.86 0.005 205)",
+					"oklch(0.95 0.003 200)"
+				]
+			}
+		},
+		"typographyMeta": {
+			"display": {
+				"displayName": "Display",
+				"purpose": "The instrument's nameplate. One per surface, in the first viewport, at a scale that would be uncomfortable if it were not the subject."
+			},
+			"headline": {
+				"displayName": "Headline",
+				"purpose": "Section engraving. Marks the major intervals of the page."
+			},
+			"title": {
+				"displayName": "Title",
+				"purpose": "Panel and card headings, project names."
+			},
+			"body": {
+				"displayName": "Body",
+				"purpose": "Running prose, capped at 68ch. Hanken Grotesk only — Grenze never sets body copy."
+			},
+			"label": {
+				"displayName": "Label",
+				"purpose": "Calibration markings — eyebrows, metadata keys, nav items, button text. The 0.12em tracking is what makes it read as an engraved interval rather than small body text."
+			},
+			"readout": {
+				"displayName": "Readout",
+				"purpose": "Measured values at scale, in tabular figures so they do not shift while animating. Never appears without a Label naming what it measures."
+			},
+			"mark": {
+				"displayName": "Maker's Mark",
+				"purpose": "Grenze Gotisch. At most once per surface, only where the content genuinely warrants a maker's mark."
+			}
+		},
+		"shadows": [
+			{
+				"name": "lift-hover",
+				"value": "0 2px 8px -2px rgba(39, 59, 66, 0.10)",
+				"purpose": "A panel raised by pointer hover, paired with translateY(-2px). Never applied at rest."
+			},
+			{
+				"name": "lift-float",
+				"value": "0 8px 24px -6px rgba(39, 59, 66, 0.14)",
+				"purpose": "Menus, popovers, sheets — genuinely detached layers."
+			},
+			{
+				"name": "lift-modal",
+				"value": "0 24px 64px -12px rgba(39, 59, 66, 0.22)",
+				"purpose": "Modal dialogs and lightboxes, the only elements far enough off the page to warrant it."
+			},
+			{
+				"name": "lit-edge-dark",
+				"value": "inset 0 1px 0 0 rgba(117, 130, 131, 0.55)",
+				"purpose": "Dark-scheme substitute for cast shadow. Shadow barely reads on a dark ground; a lit top edge is what actually happens on a dark instrument."
+			}
+		],
+		"motion": [
+			{
+				"name": "ease-settle",
+				"value": "cubic-bezier(0.22, 1, 0.36, 1)",
+				"purpose": "The default. A needle arriving with slight overshoot and damping. Every state transition unless another entry applies."
+			},
+			{
+				"name": "ease-sweep",
+				"value": "cubic-bezier(0.65, 0, 0.35, 1)",
+				"purpose": "Symmetric traversal — a trace sweeping across a face, a panel translating in and out."
+			},
+			{
+				"name": "ease-linear-ambient",
+				"value": "none",
+				"purpose": "Idle-layer motion only. Ambient drift is linear because it has no start or end the visitor perceives."
+			},
+			{
+				"name": "duration-control",
+				"value": "160ms",
+				"purpose": "Controls: buttons, inputs, links, chips."
+			},
+			{
+				"name": "duration-panel",
+				"value": "240ms",
+				"purpose": "Panels, cards, nav bar show/hide, hover lifts."
+			},
+			{
+				"name": "duration-transition",
+				"value": "420ms",
+				"purpose": "Route and view transitions. Nothing cuts; everything arrives."
+			},
+			{
+				"name": "duration-setpiece",
+				"value": "600ms",
+				"purpose": "Floor for orchestrated set-pieces and scroll-pinned sequences. May run far longer when scrubbed."
+			},
+			{
+				"name": "stagger-arrival",
+				"value": "40ms",
+				"purpose": "Interval between siblings arriving in sequence — nav sheet items, readout groups, grid cells."
+			},
+			{
+				"name": "duration-reduced",
+				"value": "100ms",
+				"purpose": "Ceiling under prefers-reduced-motion. Transitions become short crossfades; ambient and scroll choreography stop entirely."
+			},
+			{
+				"name": "ambient-period-min",
+				"value": "24s",
+				"purpose": "Minimum period for any idle loop. Shorter loops read as a repeating GIF, which is the opposite of a powered instrument."
+			}
+		],
+		"motionLayers": [
+			{
+				"name": "ambient",
+				"description": "The instrument is powered. Something is always in slow perpetual motion with no input — a drifting field, a breathing light, a Three.js scene at idle. A surface where every animation has finished and nothing moves is a switched-off instrument, which is a defect.",
+				"reducedMotion": "Stops entirely. Three.js renders one static frame."
+			},
+			{
+				"name": "scroll",
+				"description": "GSAP ScrollTrigger over Lenis drives each surface as one orchestrated timeline: pinned set-pieces, scrubbed sequences, elements arriving on cue. All of it runs off the single GSAP ticker in +layout.svelte.",
+				"reducedMotion": "Choreography resolves to final state immediately; Lenis is skipped and native scroll feeds scrollState."
+			},
+			{
+				"name": "input",
+				"description": "Surfaces respond continuously to pointer position — parallax on the instrument, light that tracks the cursor, magnetic controls. The page is aware of the visitor.",
+				"reducedMotion": "Disabled. Hover states remain, but positional tracking stops."
+			},
+			{
+				"name": "transition",
+				"description": "Nothing appears and nothing cuts. Route changes, state changes, and view changes are all animated, so motion carries continuity between views.",
+				"reducedMotion": "Becomes a crossfade at duration-reduced (100ms)."
+			}
+		],
+		"breakpoints": [
+			{ "name": "sm", "value": "640px" },
+			{ "name": "md", "value": "768px" },
+			{ "name": "lg", "value": "1024px" },
+			{ "name": "xl", "value": "1280px" },
+			{ "name": "2xl", "value": "1536px" }
+		],
+		"bezel": [
+			{ "name": "mobile", "value": "16px" },
+			{ "name": "tablet", "value": "32px" },
+			{ "name": "desktop", "value": "64px" }
+		],
+		"measure": [
+			{ "name": "prose", "value": "68ch" },
+			{ "name": "layout", "value": "1440px" }
+		]
+	},
+	"components": [
+		{
+			"name": "Primary Button",
+			"kind": "button",
+			"refersTo": "button-primary",
+			"description": "The only element on a surface permitted to carry the full primary colour as a fill. Hovers like a needle: a small lift that settles, with a turquoise rule wiping across the bottom edge.",
+			"html": "<button class=\"ds-btn-primary\">Start a project</button>",
+			"css": ".ds-btn-primary { position: relative; overflow: hidden; background: var(--color-primary); color: var(--color-on-primary); font-family: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 32px; border: none; border-radius: 2px; cursor: pointer; transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 240ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-primary::after { content: ''; position: absolute; left: 0; bottom: 0; height: 2px; width: 100%; background: var(--color-turquoise-green); transform: scaleX(0); transform-origin: left; transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 2px 8px -2px rgba(39, 59, 66, 0.10); } .ds-btn-primary:hover::after { transform: scaleX(1); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; } .ds-btn-primary:active { transform: translateY(0); }"
+		},
+		{
+			"name": "Ghost Button",
+			"kind": "button",
+			"refersTo": "button-ghost",
+			"description": "Secondary action. Hairline Control Edge border that goes Deep Kelp on hover as the ground fills to Instrument Face.",
+			"html": "<button class=\"ds-btn-ghost\">View the work</button>",
+			"css": ".ds-btn-ghost { background: transparent; color: var(--color-foreground); font-family: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 32px; border: 1px solid var(--color-control); border-radius: 2px; cursor: pointer; transition: color 160ms cubic-bezier(0.22, 1, 0.36, 1), border-color 160ms cubic-bezier(0.22, 1, 0.36, 1), background-color 160ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-ghost:hover { color: var(--color-primary); border-color: var(--color-primary); background: var(--color-surface); } .ds-btn-ghost:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }"
+		},
+		{
+			"name": "Input Field",
+			"kind": "input",
+			"refersTo": "input-field",
+			"description": "Focus draws a machined double-line — the border shifts to Deep Kelp and a second hairline ring appears at 1px offset. Never a glow.",
+			"html": "<input class=\"ds-input-field\" type=\"email\" placeholder=\"you@company.com\" />",
+			"css": ".ds-input-field { background: var(--color-surface); color: var(--color-foreground); font-family: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif; font-size: 1.0625rem; line-height: 1.65; padding: 12px 16px; border: 1px solid var(--color-control); border-radius: 2px; width: 100%; transition: border-color 160ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 160ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-input-field::placeholder { color: var(--color-muted); } .ds-input-field:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 1px var(--color-primary); } .ds-input-field:disabled { background: var(--color-background); color: var(--color-muted); border-color: var(--color-divider); cursor: not-allowed; }"
+		},
+		{
+			"name": "Panel",
+			"kind": "card",
+			"refersTo": "panel",
+			"description": "Instrument Face one tonal step above ground. No shadow at rest — the tonal step is the separation. Lifts only on hover, and only where it is interactive.",
+			"html": "<article class=\"ds-panel\"><h3 class=\"ds-panel-title\">Lenexa Medical</h3><p class=\"ds-panel-body\">End-to-end rebuild: architecture, CMS integration, animation, responsive design.</p></article>",
+			"css": ".ds-panel { background: var(--color-surface); border: 1px solid var(--color-divider); border-radius: 12px; padding: 32px; transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 240ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-panel:hover { transform: translateY(-2px); box-shadow: 0 2px 8px -2px rgba(39, 59, 66, 0.10); } .ds-panel-title { font-family: 'Grenze', ui-serif, Georgia, serif; font-size: 1.75rem; font-weight: 500; line-height: 1.2; color: var(--color-foreground); margin: 0 0 16px; } .ds-panel-body { font-family: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif; font-size: 1.0625rem; line-height: 1.65; color: var(--color-muted); margin: 0; max-width: 68ch; }"
+		},
+		{
+			"name": "Readout",
+			"kind": "custom",
+			"refersTo": "chip-readout",
+			"description": "The signature component. A measured figure in tabular figures over a hairline baseline, with a Label naming what it measures. The figure counts up on entry like a needle sweeping to its value, then holds. Never appears unlabelled.",
+			"html": "<div class=\"ds-readout\"><span class=\"ds-readout-figure\">67,400</span><span class=\"ds-readout-label\">Downloads across 12 releases</span></div>",
+			"css": ".ds-readout { display: flex; flex-direction: column; gap: 8px; padding-top: 16px; border-top: 1px solid var(--color-divider); } .ds-readout-figure { font-family: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif; font-size: 4rem; font-weight: 500; line-height: 1; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; color: var(--color-foreground); } .ds-readout-label { font-family: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-muted); }"
+		},
+		{
+			"name": "Nav Link",
+			"kind": "nav",
+			"refersTo": "nav-link",
+			"description": "No rule at rest. Hover draws a hairline Deep Kelp rule left-to-right; active holds it and takes the accent colour.",
+			"html": "<a class=\"ds-nav-link\" href=\"#work\">Work</a>",
+			"css": ".ds-nav-link { position: relative; display: inline-block; font-family: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-foreground); text-decoration: none; padding: 8px 0; transition: color 200ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-nav-link::after { content: ''; position: absolute; left: 0; bottom: 0; height: 1px; width: 100%; background: var(--color-primary); transform: scaleX(0); transform-origin: left; transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-nav-link:hover, .ds-nav-link[aria-current='page'] { color: var(--color-primary); } .ds-nav-link:hover::after, .ds-nav-link[aria-current='page']::after { transform: scaleX(1); } .ds-nav-link:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 4px; }"
+		},
+		{
+			"name": "Calibration Rule",
+			"kind": "custom",
+			"refersTo": null,
+			"description": "The structural hairline that marks intervals on a page the way scale markings do on an instrument face. Full-bleed to the bezel, optionally carrying a Label at its left end.",
+			"html": "<div class=\"ds-calibration\"><span class=\"ds-calibration-label\">Selected work</span></div>",
+			"css": ".ds-calibration { display: flex; align-items: center; gap: 16px; padding-top: 16px; border-top: 1px solid var(--color-divider); } .ds-calibration-label { font-family: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-muted); white-space: nowrap; }"
+		}
+	],
+	"narrative": {
+		"northStar": "The Marine Instrument",
+		"overview": "The site is a precision instrument in a slate housing — a marine chronometer, a depth sounder, an optical bench. Slate is the case: structural, matte, silent, the thing that holds everything else steady. Sea glass is the readout: luminous, sparing, and always attached to a real value. Grenze is the engraving on the instrument's nameplate and its calibration marks; Hanken Grotesk is the modern readout printed beside them. The instrument is machined, not moulded — its edges are cut, its scales are marked at intervals somebody chose, and nothing on its face is there for decoration.\n\nThe metaphor is doing structural work, not supplying a texture. AKJ Studio's positioning is motion and craft, and an instrument is the one object whose entire value is that it is precisely made and never at rest. A needle settles. A trace sweeps. A bubble finds level. That is where 'the page is never fully still' stops being an effect and becomes the subject: a page that comes to a complete stop reads as a switched-off instrument, which is a defect, not a resting state. Every claim on this site is a reading the instrument is taking, and every reading is one a visitor can verify.\n\nDepth is dimensional and caused, never drawn. Elements occupy real z-space, Three.js scenes carry an actual light rig, and a shadow exists only where something is genuinely above something else. Light and dark schemes are both first-class and neither is the 'real' one: the same instrument in afternoon daylight and under panel light.",
+		"keyCharacteristics": [
+			"Slate housing, sea-glass readout: structure is silent, signal is luminous, and the two never swap jobs.",
+			"Perpetually powered — an idle, scroll, input, and transition motion layer running at all times.",
+			"Machined form language: cut edges, hairline calibration rules, radii from a fixed machining set.",
+			"Dimensional depth from real light and z-space, never from decorative shadow.",
+			"Engraved display type (Grenze) against a modern readout face (Hanken Grotesk), with tabular figures on every measured number.",
+			"Authored as Tailwind utilities against semantic role tokens; hand-written CSS is an exception that needs a reason.",
+			"Both colour schemes fully realised; neither is an afterthought."
+		],
+		"rules": [
+			{
+				"name": "The Housing and Readout Rule",
+				"body": "Slate and neutrals are structure and say nothing; sea green is signal and always means something. A green value on an element that carries no live state, no action, and no measured figure is a broken readout — remove it or give it something to read.",
+				"section": "colors"
+			},
+			{
+				"name": "The Two Instruments Rule",
+				"body": "Light and dark are the same object under different light, not two designs. Every colour decision is made as a role token, never as a literal value, so both schemes resolve from one authored source. A component that only looks right in one scheme is unfinished.",
+				"section": "colors"
+			},
+			{
+				"name": "The Emissive Exception",
+				"body": "Turquoise Green may exceed normal contrast expectations only where it functions as emitted light — a Three.js emissive material, a trace glow, a lens edge. The moment it sits behind or beneath text, ordinary contrast rules apply.",
+				"section": "colors"
+			},
+			{
+				"name": "The Engraved Plate Rule",
+				"body": "Grenze appears where an instrument would actually be engraved — the nameplate, section markings, numerals on a dial, a project's name on its plate. It never sets running prose.",
+				"section": "typography"
+			},
+			{
+				"name": "The Maker's Mark Rule",
+				"body": "Grenze Gotisch appears at most once per surface, and only where the content genuinely warrants a maker's mark: the studio signature, a single pull quote, the close. A second Grenze Gotisch on a page is a bug.",
+				"section": "typography"
+			},
+			{
+				"name": "The Tabular Figure Rule",
+				"body": "Every measured number on the site is a reading, and readings must not shift as they animate. Any figure that is counted, compared, or counted-up to carries font-variant-numeric: tabular-nums. Proportional figures are for prose only.",
+				"section": "typography"
+			},
+			{
+				"name": "The Named Reading Rule",
+				"body": "A Readout never appears alone. Every figure carries a Label naming what it measures and, where the claim is external, a link to where it can be verified. An unlabelled big number is decoration wearing data's clothes.",
+				"section": "typography"
+			},
+			{
+				"name": "The Calibration Rule",
+				"body": "Every spatial value comes from the 4px-base scale. If an arbitrary Tailwind value is needed, either the scale is wrong and should be extended deliberately, or the layout is. Arbitrary spacing values are a code-review failure.",
+				"section": "layout"
+			},
+			{
+				"name": "The Complete Break Rule",
+				"body": "The bezel is either respected or fully broken. An element that hangs 12px past the bezel looks like a mistake; one that runs edge to edge looks like a decision.",
+				"section": "layout"
+			},
+			{
+				"name": "The Caused Depth Rule",
+				"body": "A shadow is a consequence of an element being above another element. If nothing is above anything, there is no shadow. A drop shadow on a flat card sitting flush in the page is decoration, and it is banned.",
+				"section": "elevation"
+			},
+			{
+				"name": "The One Lamp Rule",
+				"body": "Every shadow on the site — CSS and Three.js alike — is cast by the same light: above, slightly in front. Two elements lit from different directions on one surface breaks the illusion that the page is a single physical object.",
+				"section": "elevation"
+			},
+			{
+				"name": "The Machined Edge Rule",
+				"body": "Radii come from the fixed set (0 / 2 / 6 / 12 / 20 / full). rounded-full is reserved for things that are genuinely round — a dial, a lens, an avatar, a status dot. A pill-shaped button is a different product's design language.",
+				"section": "shapes"
+			},
+			{
+				"name": "The Cut Not Poured Rule",
+				"body": "Where a shape needs emphasis, it is cut — a clipped corner, a notch, an inset plate — rather than softened, glowed, or gradient-filled. Gradients appear only as emitted light in the Three.js layer, never as a surface fill on a DOM element.",
+				"section": "shapes"
+			},
+			{
+				"name": "The Utility-First Rule",
+				"body": "Styling is authored as Tailwind utility classes against the @theme role tokens. Hand-written CSS is reserved for exactly four cases: (1) @font-face, @theme, and token definitions in src/routes/layout.css; (2) @keyframes and motion GSAP cannot own; (3) selectors Tailwind genuinely cannot express — ::selection, scrollbar pseudo-elements, complex :has(), print rules; (4) Three.js canvas sizing and positioning. A Svelte <style> block that does not fall into one of those four is a bug, and 'it was quicker' is not a fifth case.",
+				"section": "components"
+			},
+			{
+				"name": "The Role Token Rule",
+				"body": "No component contains a literal colour. Every colour arrives through a semantic role utility (bg-surface, text-foreground, border-control) so both schemes resolve from one authored source. A hex value inside a component is how dark mode breaks.",
+				"section": "components"
+			}
+		],
+		"dos": [
+			"Do author every style as Tailwind utilities against the @theme role tokens; reserve hand-written CSS for the four cases in the Utility-First Rule.",
+			"Do keep something in motion at idle on every surface. The four motion layers — ambient, scroll-choreographed, input-reactive, and transitional — all run, on every surface.",
+			"Do damp motion like a needle: arrive with slight overshoot and settle. Default easing cubic-bezier(0.22, 1, 0.36, 1); 160ms for controls, 240ms for panels, 600ms+ for set-pieces.",
+			"Do gate every motion layer on reducedMotion from $lib/motion/scroll.svelte.js. Under reduce: ambient stops, Three.js renders one static frame, scroll choreography becomes final state, transitions become 100ms crossfades.",
+			"Do read scroll position from the shared scrollState store, and scroll programmatically through scrollTo() from the motion module.",
+			"Do run all animation off the single GSAP ticker already driving Lenis in +layout.svelte.",
+			"Do animate only transform, opacity, and filter in DOM motion, and pause every Three.js scene when off-screen or the tab is hidden.",
+			"Do give every measured figure tabular figures and a Label naming what it measures.",
+			"Do call ScrollTrigger.refresh() after any layout-changing content load.",
+			"Do use long, non-obvious periods for ambient loops so they never read as a repeating GIF."
+		],
+		"donts": [
+			"Don't write raw CSS where a Tailwind utility exists.",
+			"Don't put a hex value inside a component; every colour comes from a role token.",
+			"Don't add a window.addEventListener('scroll') anywhere — read scrollState.",
+			"Don't call window.scrollTo(); it fights Lenis. Use the motion module's scrollTo().",
+			"Don't start a second requestAnimationFrame loop. The project runs one clock.",
+			"Don't apply a shadow to an element that isn't genuinely above another element.",
+			"Don't use rounded-full on anything that isn't a dial, lens, avatar, or status dot.",
+			"Don't let Grenze Gotisch appear more than once on a surface, or Grenze set running body copy.",
+			"Don't use Etched Grey below 16px, or for information a visitor actually needs — it clears 4.5:1 with no margin.",
+			"Don't use sea green on anything that isn't an action, a live state, or a measured value.",
+			"Don't use backdrop-filter outside a genuine overlapping plane; refraction belongs in the Three.js layer.",
+			"Don't use an arbitrary spacing value; extend the scale deliberately or fix the layout.",
+			"Don't ship a big number without a label and, where the claim is external, a verification link.",
+			"Don't let a surface come to a complete stop. A fully static page is a switched-off instrument."
+		]
+	}
+}
