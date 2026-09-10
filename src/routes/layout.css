@@ -1,1 +1,170 @@
 @import 'tailwindcss';
+
+/* ------------------------------------------------------------------ *
+ * Typefaces — AKJStudio
+ * Grenze: headings. Hanken Grotesk: body. Grenze Gotisch: expressive,
+ * selective use only — never the default heading face.
+ * ------------------------------------------------------------------ */
+
+@font-face {
+	font-family: 'Hanken Grotesk';
+	src: url('/fonts/hanken-grotesk-variable.woff2') format('woff2');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Hanken Grotesk';
+	src: url('/fonts/hanken-grotesk-italic-variable.woff2') format('woff2');
+	font-weight: 100 900;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Grenze';
+	src: url('/fonts/grenze-variable.woff2') format('woff2');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Grenze';
+	src: url('/fonts/grenze-italic-variable.woff2') format('woff2');
+	font-weight: 100 900;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Grenze Gotisch';
+	src: url('/fonts/grenze-gotisch-variable.woff2') format('woff2');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* ------------------------------------------------------------------ *
+ * Palette — Sea Glass / Slate
+ * Roles resolve per colour scheme below; `@theme inline` exposes them
+ * to Tailwind so `bg-surface`, `text-muted`, `border-divider` etc. work.
+ * ------------------------------------------------------------------ */
+
+:root {
+	color-scheme: light;
+
+	--sg-background: #eff7f2;
+	--sg-surface: #ffffff;
+	--sg-foreground: #273b42;
+	--sg-muted: #617276;
+	--sg-primary: #375e50;
+	--sg-on-primary: #ffffff;
+	--sg-secondary: #96d1aa;
+	--sg-on-secondary: #111111;
+	--sg-link: #375e50;
+	--sg-divider: #cbd5d2;
+	--sg-control: #808e91;
+}
+
+/* Dark values, applied by the system preference and by the explicit override. */
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme='light']) {
+		color-scheme: dark;
+
+		--sg-background: #14242a;
+		--sg-surface: #21353b;
+		--sg-foreground: #ecf5ef;
+		--sg-muted: #a3aeac;
+		--sg-primary: #b5decc;
+		--sg-on-primary: #111111;
+		--sg-secondary: #7faf91;
+		--sg-on-secondary: #111111;
+		--sg-link: #b5decc;
+		--sg-divider: #3b4a4d;
+		--sg-control: #758283;
+	}
+}
+
+:root[data-theme='dark'] {
+	color-scheme: dark;
+
+	--sg-background: #14242a;
+	--sg-surface: #21353b;
+	--sg-foreground: #ecf5ef;
+	--sg-muted: #a3aeac;
+	--sg-primary: #b5decc;
+	--sg-on-primary: #111111;
+	--sg-secondary: #7faf91;
+	--sg-on-secondary: #111111;
+	--sg-link: #b5decc;
+	--sg-divider: #3b4a4d;
+	--sg-control: #758283;
+}
+
+@theme inline {
+	--font-sans: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+	--font-heading: 'Grenze', ui-serif, Georgia, serif;
+	--font-gotisch: 'Grenze Gotisch', 'Grenze', ui-serif, serif;
+
+	/* Scheme-aware roles */
+	--color-background: var(--sg-background);
+	--color-surface: var(--sg-surface);
+	--color-foreground: var(--sg-foreground);
+	--color-muted: var(--sg-muted);
+	--color-primary: var(--sg-primary);
+	--color-on-primary: var(--sg-on-primary);
+	--color-secondary: var(--sg-secondary);
+	--color-on-secondary: var(--sg-on-secondary);
+	--color-link: var(--sg-link);
+	--color-divider: var(--sg-divider);
+	--color-control: var(--sg-control);
+}
+
+@theme {
+	/* Fixed brand references — identical in both schemes */
+	--color-turquoise-green: #b5decc;
+	--color-cobalt-green: #96d1aa;
+	--color-slate: #34454c;
+}
+
+/* `dark:` follows the system preference unless `data-theme` overrides it. */
+@custom-variant dark {
+	@media (prefers-color-scheme: dark) {
+		&:where(:root:not([data-theme='light']), :root:not([data-theme='light']) *) {
+			@slot;
+		}
+	}
+	&:where([data-theme='dark'], [data-theme='dark'] *) {
+		@slot;
+	}
+}
+
+@layer base {
+	body {
+		background-color: var(--color-background);
+		color: var(--color-foreground);
+		font-family: var(--font-sans);
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-heading);
+	}
+
+	a {
+		color: var(--color-link);
+	}
+
+	::selection {
+		background-color: var(--color-secondary);
+		color: var(--color-on-secondary);
+	}
+}
